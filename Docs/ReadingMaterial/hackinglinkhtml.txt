@@ -1,0 +1,155 @@
+##Source:
+https://www.reddit.com/r/HowToHack/wiki/index
+
+###BOOKS: 
+
+</div>
+
+    <textarea readonly="" class="source" rows="20" cols="20">**I prefer books, what should I be reading?**
+
+    Google Hacking for Pen Testers [Thanks to Velzok] (/r/HowToHack/comments/17lw02/where_to_begin/c875kjv)
+
+    Grey Hat Hacking [Thanks to Velzok] (/r/HowToHack/comments/17lw02/where_to_begin/c875kjv)
+
+    Web Application Hackers Handbook [Thanks to Velzok] (/r/HowToHack/comments/17lw02/where_to_begin/c875kjv)
+
+    Code: The Hidden Language of Computer Hardware and Software [Thanks to deadinthepresent](/r/HowToHack/comments/16ym4f/last_post_didnt_get_views_im_a_beginner_wanting/c80knto)
+
+    Hacking: The Art of Exploitation [Thanks to bfink13](/r/HowToHack/comments/16ym4f/last_post_didnt_get_views_im_a_beginner_wanting/c80mh51).
+
+    K&amp;R's The C Programming Language [Thanks to kaden_sotek](/r/HowToHack/comments/16ym4f/last_post_didnt_get_views_im_a_beginner_wanting/c8191qq).
+
+    Art of Assembly http://cs.smith.edu/~thiebaut/ArtOfAssembly/CH01/CH01-1.html [Thanks to ps-aux](/r/HowToHack/comments/15wr63/ive_dedicated_one_of_my_new_years_resolutions_to/c7qqaob).
+
+    Violent Python: A Cookbook for Hackers, Forensic Analysts, Penetration Testers and Security Engineers It will teach you basics of python then youll write your own vulnerability scanner and evenrually an SSH botnet. [Thanks to d1zzY](/r/HowToHack/comments/173ap7/i_want_to_learn_how_to_hack_because_i_believe_it/c82463p).
+
+    Hacking Exposed 7: Network Security Secrets &amp; Solutions, Seventh Edition [Thanks to cydonknight](/r/HowToHack/comments/173ap7/i_want_to_learn_how_to_hack_because_i_believe_it/c81vksr).
+
+    Metasploit: The Penetration Tester's Guide [Thanks to TinaShaw76](/r/HowToHack/comments/13zvr8/help_learning_to_use_backtrack/c78tyle).
+
+    The Basics of Hacking and Penetration Testing: Ethical Hacking and Penetration Testing Made Easy [Thanks to Here_And_Now](/r/HowToHack/comments/11o7if/i_want_to_hack_help_wanted/c6oaaww).
+
+    Ghosts In The Wires: My Adventure As The World's Most Wanted Hacker [Thanks to EncasedDeath](/r/HowToHack/comments/10q3l8/here_is_a_small_collection_of_hacking_books_that/c6fpmsi).
+
+    Gray Hat Hacking: The Ethical Hacker's Handbook [Thanks to EncasedDeath](/r/HowToHack/comments/10q3l8/here_is_a_small_collection_of_hacking_books_that/c6fpmsi).
+
+    Hacking - Firewalls And Networks How To Hack Into Remote Computers [Thanks to EncasedDeath](/r/HowToHack/comments/10q3l8/here_is_a_small_collection_of_hacking_books_that/c6fpmsi).
+
+    Hacking The Next Generation [Thanks to EncasedDeath](/r/HowToHack/comments/10q3l8/here_is_a_small_collection_of_hacking_books_that/c6fpmsi).
+
+    The Basics of Hacking and Penetration Testing, Wireless Hacking [Thanks to EncasedDeath](/r/HowToHack/comments/10q3l8/here_is_a_small_collection_of_hacking_books_that/c6fpmsi).
+
+    Gray Hat Python: Python Programming for Hackers and Reverse Engineers [Thanks to obscured_redditor](/r/HowToHack/comments/10q3l8/here_is_a_small_collection_of_hacking_books_that/c6gbiw0).
+
+    Network Fundamentals: CCNA Exploration Companion Guide [Thanks to WilliamFingShatner](http://www.reddit.com/r/HowToHack/comments/1azsh2/what_should_i_start_with_network/c92jrp6).
+
+    Network+ Study Guide, Fourth Edition [see online](http://west.mft.info/UploadedFiles/gFiles/24f8e396593b454.pdf) [Thanks to \[deleted\]](http://www.reddit.com/r/HowToHack/comments/1b51rr/im_starting_from_scratch_i_know_a_bit_of_html_but/c94qmel).</textarea>
+
+
+###WEBLINKS:
+
+</div>
+
+    <textarea readonly="" class="source" rows="20" cols="20">**Could you point out some useful resources to start?** 
+     
+     Hacking jargon
+
+     http://www.catb.org/jargon/html/index.html [Thanks to jdude104](/r/HowToHack/comments/17tipp/rhowtohack_faq_starting_tips_resources_books_and/c88wiqb).
+
+     http://hackshackers.com/resources/hackshackers-survival-glossary/ [Thanks to frawk_yew](/r/HowToHack/comments/15lu0l/is_there_a_glossary_for_hacker_terms/c7nm1o9).
+
+     http://www.eps.mcgill.ca/jargon/jargon.html [Thanks to frawk_yew](/r/HowToHack/comments/15lu0l/is_there_a_glossary_for_hacker_terms/c7nm1o9).
+
+     http://www.dourish.com/goodies/jargon.html [Thanks to frawk_yew](/r/HowToHack/comments/15lu0l/is_there_a_glossary_for_hacker_terms/c7nm1o9).
+      
+      Hacking learning resources
+
+      http://wiki.osdev.org/Expanded_Main_Page OS concepts, Linux, C, ASM. [Thanks to hacker_sam](/r/HowToHack/comments/17lw02/where_to_begin/c86zh4d)
+
+      http://vulnhub.com/ It has a lot of vulnerable operating systems and some have scenarios. It also has solutions that show you step by step walkthrough. [Thanks to d1zzY](/r/HowToHack/comments/179n88/want_to_learn_how_to_hack/).
+
+      http://sectools.org/ Security tools [Thanks to stingrad](/r/HowToHack/comments/14h4o9/basic_hacking_skills/c7d0tbz).
+
+      https://www.golemtechnologies.com/articles/shell-injection Shell Injection [Thanks to ps-aux](/r/HowToHack/comments/14h4o9/basic_hacking_skills/c7d2kv6).
+
+      http://k3170makan.blogspot.com.ar/2012/12/information-gathering-techniques-dig.html Information Gathering Techniques: Dig and DNS Servers
+
+      https://www.pentesterlab.com/ PentesterLab is an easy and great way to learn penetration testing. PentesterLab provides vulnerable systems that can be used to test and understand vulnerabilities. [Thanks to IamaRead](/r/HowToHack/comments/173ap7/i_want_to_learn_how_to_hack_because_i_believe_it/c81urqs).
+
+      /r/HowToHack/comments/15q5xh/howtohack_tutorial_setup_backtrack_5/ HowToHack Tutorial: Setup BackTrack 5 [Thanks to BinaryTENSHi](/r/HowToHack/comments/15q5xh/howtohack_tutorial_setup_backtrack_5/).
+
+      Networking learning resources
+
+      http://class.stanford.edu/networking/Fall2012 Stanford's networking course. [Thanks to bloco](/r/HowToHack/comments/17lqcq/introduction_to_network_security_experienced/c870los).
+
+      https://class.coursera.org/comnetworks-2012-001/class/index University of Washington's networkign course. [Thanks to bloco](/r/HowToHack/comments/17lqcq/introduction_to_network_security_experienced/c870oo7).
+
+      https://en.wikipedia.org/wiki/OSI_model OSI Model [Thanks to WilliamFingShatner](/r/HowToHack/comments/1azsh2/what_should_i_start_with_network/c92jrp6).
+
+      https://en.wikipedia.org/wiki/TCP/IP_model TCP/IP Model [Thanks to WilliamFingShatner](/r/HowToHack/comments/1azsh2/what_should_i_start_with_network/c92jrp6).
+
+      Cryptography learning resources
+       
+       https://class.coursera.org/crypto-005/class/index Stanford's Cryptography course. [Thanks to bloco](/r/HowToHack/comments/17lqcq/introduction_to_network_security_experienced/c870oo7).
+
+       http://www.openwall.com/presentations/Passwords12-The-Future-Of-Hashing/ Password security: past, present, future [Thanks to ps-aux](/r/HowToHack/comments/18z9jt/i_have_some_basic_questions_that_i_couldnt_find/c8le294).
+
+       https://www.youtube.com/watch?v=vgTtHV04xRI Great explanation of how encryption works on the internet [Thanks to maximo66](/r/HowToHack/comments/1bd54z/great_explanation_of_how_encryption_works_on_the/).
+
+       Hacking challenges and tutorials
+
+       http://www.enigmagroup.org Lots of challenges. [Thanks to d1zzY](/r/HowToHack/comments/173ap7/i_want_to_learn_how_to_hack_because_i_believe_it/c81tnxq).
+
+       http://www.hackthissite.org Simpler challenges. [Thanks to d1zzY](/r/HowToHack/comments/173ap7/i_want_to_learn_how_to_hack_because_i_believe_it/c81tnxq).
+
+       http://www.thisislegal.com/ [Thanks to chrswalks](/r/HowToHack/comments/173ap7/i_want_to_learn_how_to_hack_because_i_believe_it/c82abd3).
+
+       http://halls-of-valhalla.org/ [Thanks to ynori7](/r/HowToHack/comments/16wxub/big_beginner_here_i_want_to_learn_to_hack_but_not/c80rz43).
+
+       http://www.wechall.net/ [Thanks to ynori7](/r/HowToHack/comments/16wxub/big_beginner_here_i_want_to_learn_to_hack_but_not/c80rz43).
+
+       Hacking and security news
+
+       http://news.ycombinator.com/ Hacker news [Thanks to stingrad](/r/HowToHack/comments/14h4o9/basic_hacking_skills/c7d0tbz).
+
+       http://www.pauldotcom.com/ Security blog. [Thanks to hacker_sam](/r/HowToHack/comments/17lw02/where_to_begin/c86zh4d)
+
+       http://www.darkreading.com/ Security blog [Thanks to hacker_sam](/r/HowToHack/comments/17lw02/where_to_begin/c86zh4d)
+
+       http://www.securitytube.net/ Security concepts. [Thanks to hacker_sam](/r/HowToHack/comments/17lw02/where_to_begin/c86zh4d) and [Thanks to stingrad](/r/HowToHack/comments/14h4o9/basic_hacking_skills/c7d0tbz).
+
+       http://www.jupiterbroadcasting.com/show/techsnap/ This weekly video-podcast talks about recent hacks and HOW they were made and other net-security related issues. [Thanks to rickisen](/r/HowToHack/comments/18navk/hacking_documentariesvideos_of_exploiting/c8gbrvh).
+
+       &gt; Go on Youtube and look up some talks that were made during DEFCON. You'll find plenty of videos. [Thanks to THEUSERNAMETAKER](/r/HowToHack/comments/18navk/hacking_documentariesvideos_of_exploiting/c8gcrfo).
+
+       Other subreddits
+
+       /r/netsec Security subreddit [Thanks to hacker_sam](/r/HowToHack/comments/17lw02/where_to_begin/c86zh4d)
+
+       /r/hacking [Thanks to Spherius](/r/HowToHack/comments/1075jg/i_have_no_idea_where_to_start_with_hacking_but_i/c6b355f).
+
+       /r/netsec [Thanks to Spherius](/r/HowToHack/comments/1075jg/i_have_no_idea_where_to_start_with_hacking_but_i/c6b355f).
+
+       /r/infosec [Thanks to Spherius](/r/HowToHack/comments/1075jg/i_have_no_idea_where_to_start_with_hacking_but_i/c6b355f).
+
+       /r/blackhat [Thanks to Spherius](/r/HowToHack/comments/1075jg/i_have_no_idea_where_to_start_with_hacking_but_i/c6b355f).
+
+       /r/openhacker [Thanks to Spherius](/r/HowToHack/comments/1075jg/i_have_no_idea_where_to_start_with_hacking_but_i/c6b355f).
+
+       /r/lowlevel [Thanks to Spherius](/r/HowToHack/comments/1075jg/i_have_no_idea_where_to_start_with_hacking_but_i/c6b355f).
+
+       /r/socialengineering [Thanks to Spherius](/r/HowToHack/comments/1075jg/i_have_no_idea_where_to_start_with_hacking_but_i/c6b355f).
+
+       Other communities
+
+       http://s4b3rstealth.forumotion.pro/login a forum for people interested in "hacking" mainly with the linux distro backtrack 5. just make an account its free, there's a sub-section of the forum for "total beginners" I've made a lot of threads on there for great books and things to get started with. [Thanks to Velzok] (/r/HowToHack/comments/17lw02/where_to_begin/c875kjv)
+
+       http://hackerspaces.org/wiki/List_of_Hacker_Spaces Finding a Hackerspace [Thanks to IamaRead](/r/HowToHack/comments/173ap7/i_want_to_learn_how_to_hack_because_i_believe_it/c81urqs).
+
+       Cracking (NOT hacking!)
+
+       http://www.cheatengine.org/ [Thanks to ColdTitanium](/r/HowToHack/comments/16wxub/big_beginner_here_i_want_to_learn_to_hack_but_not/c80ntmk).
+
+       http://www.ollydbg.de/ [Thanks to ColdTitanium](/r/HowToHack/comments/16wxub/big_beginner_here_i_want_to_learn_to_hack_but_not/c80ntmk).</textarea>
+           
+           <p></p><hr><em>revision by <a href="https://www.reddit.com/user/SPARTAN-001" class="author may-blank id-t2_79roy">SPARTAN-001</a><span class="flair " title="Red Team">Red Team</span><span class="userattrs"></span>—&nbsp;<time title="Mon Dec 7 14:14:24 2015 UTC" datetime="2015-12-07T14:14:24+00:00">1 year ago</time><a href="#" class="toggle-source">view source</a></em><script id="archived-popup" type="text/template"><div class="interstitial"><img class="interstitial-image" src="//www.redditstatic.com/interstitial-image-archived.png" alt="archived" height="150" width="150"><div class="interstitial-message md-container"><div class="md"><h3>This is an archived post. You won't be able to vote or comment.</h3><p>Posts&#32;are&#32;automatically&#32;archived&#32;after&#32;6&#32;months.</p></div></div><div class="buttons"><a href="/" class="c-btn c-btn-primary">Got It</a></div></div></script>

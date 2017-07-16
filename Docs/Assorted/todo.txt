@@ -1,0 +1,11 @@
+Install sublime
+//Install spotify
+Automatic vim syntax highlighting
+//Tmux
+Capslock remind to control
+Escape relearn
+Gnome
+Window resizing
+//Touchpad issues (webpage in onetab)
+Touchpad issues persist
+Figure out better git workflow than just shoving everything in "SyncSpace"

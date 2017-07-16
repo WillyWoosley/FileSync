@@ -1,0 +1,87 @@
+~Notes:
+ - man xorg.conf contains important information about graphical/desktop setting configuration
+ - The important components of the xorg.conf are : ServerLayout, Files, Module, Input Device,
+    Monitor, Device, Screen
+    - ServerLayout deals with display and screen layout, and names input devices
+    -Files deals with session colors and port numbers
+    -The Module section specifies loadable modules and drivers to load
+    -The InputDevice section deals with device configuration
+    -Monitor configures the default display device
+    -Device provides details about video graphics chipset
+    -Screen ties together much of the data from the previous sections
+-Lenses are the different filters which can be applied to the Dash
+-The launcher is the bar on the left
+-The panel is the bar on top
+-apt-get will never removes or adds software
+-apt's install will sometimes recommend packages to install, to install these say n to continue
+    and then reinitialize the install with the suggested package name at the end of the command
+-If you run apt-get install with a package you already have installed, apt treats it as apt-get
+    update instead
+-.tar files (referred to as tarballs) are files which have been compressed using gzip or bzip
+
+~Keyboard Shortcuts
+- Shift-Alt-Tab -> Reverse Alt-Tab
+- Alt-` -> Alt-Tab within multiple instances of one program
+- PrtScr to take a screenshot
+- Ctrl-Alt-Arrow Key to move between workspaces
+
+~Terminal Commands
+-mkisofs : Used for burning ISO images
+-cdrecord : Used for burning ISO images to CDs
+-netpbm : Tools for image conversion/manipulation
+-lspci : Lists PCI information
+-sudo : Gives super user privleges
+-apt-get : Ubuntu package manager; ATP
+    -update : Tells ATP to contact all servers its configured to use and download the latest
+    list of file updates
+    -upgrade : Downloads any updates software
+    -dist-upgrade : Downloads and updates Ubuntu/Debian distribution
+    -install : Used to add new software; queries apt's list of software, finds a match, and
+    installs the software and all dependencies not already installed
+    -clean : Deletes DEB files that apt has cached
+    -autoclean : Same as apt-get clean, but only files that are beyond a certain age
+    -remove : Removes packages which you no longer want--as well as all packages which depend
+    upon it (this is important, as it can mean that many files can be uninstalled in addition
+    to the one you intend to uninstall)
+        --purge : Also removes the configuration files for a package
+    -purge : same as remove -purge
+    -autoremove : MISSING DEFINITION
+    -source : Gets the source of a repository
+-apt : New simplified interface to APT, akin to apt-get. Entries will take the form
+    APT COMMAND : APT-GET EQUIVALENT
+    -install : install
+    -remove : remove
+    -update : update
+    -upgrade : upgrade
+    -full-upgrade : dist-upgrade
+    -purge : remove -purge
+    -autoremove : autoremove
+    -purge : purge
+-apt-cache : MISSING DEFINITION
+    -search : Searches repositories for a specified package
+        --n : specifies to only search filenames, rather than filenames and descriptions
+    -showpkg : Provides information on "reverse depends" (what other packages require or
+        recommend a given package), dependencies, and functions that a package provides
+-grep : MISSING DEFINITION
+-tar : missing definition
+    --C : uncompresses tarballs
+-file : Specifies filetype of a passed object
+-make : Compiles parts of a larger program
+    -install : Installs self compiled software
+    -clean : Cleans install location of self installed software after a failed install attempt
+    -uninstall : Uninstalls self compiled software
+-./configure : Compiles source code
+
+~MISSING DEFINITIONS
+-apt-cache
+-grep
+-apt-get autoremove
+
+~REGEX Reference:
+-^ - Start
+-$ - End
+
+https://youtu.be/Y8mLi-rRTh8?t=1480
+
+~References
+-wiki.ubuntu.com

@@ -1,0 +1,333 @@
+###Source: Essential C by Nick Parlante###
+
+###Will cover variables, int types, floating point types, promotion, truncation, operators, control structures (if, while, for), functions, value parameters, reference parameters, structs, pointers, arrays, the pre-processor, and the standard C library functions###
+
+###Table of Contents###
+Section One ....... Basic Types and Operators
+
+###Notes###
+
+#Section One: Basic Types and Operators#
+
+~ The C programming model is that the programmer must know exactly what they want to do and how to use the language constructs to achieve that goal
+
+~ C's type and error systems check only at compile time. Compiled code runs in stripped down run-time model without safety checks. There is no garbage collector; this must be done manually. This makes C fast but fragile
+
+~ the "integral" types in C form a family of integer types, which all behave like integers and can be used in similar ways
+
+~ C's integral types are as follow:
+    ~ char's are ASCII characters, at least 8 bits long, signed range of -128 to 127, or unsigned 0 to 255. char's are required to be the "smallest addressable unit" for the machine
+    ~ short's are small integers of at least 16 bits, with a signed range of -32768 to 32767
+    ~ int's are the default integer, from 16 to 32 bits, "most comfortable" for the machine
+    ~ long's are typically 32 bits, signed -2 billion to 2 billion
+
+~ the qualifier unsigned disallows negative values for a type, but means it has a greater positive range
+
+~ Rather than defining exact size, C defines a lower limit for an integer type, which makes it more widely implementable, but can sometimes lead to bugs when run on different machines
+
+~ a char constant is denoted by single quotes (i.e. 'A')
+
+~ '\n' creates a newline, '\t' creates a tab, '\0' is the null character, '\012' is value 12 octal, which is decimal 10
+~ numbers default to the type int. Following a number with an L casts it as a long, and prefacing it with 0x casts it as a hexadecimal number, and prefacing it with just 0 denotes it as an octal
+
+~ despite the process of promoting, ints can end up overflowing if they end up producing a result which is to large for their alloted amount of bits 
+    ~ This occurs because C promotes purely on types in an expression, and does not consider poss   ible values (which usually don't exit until runtime anyway)
+
+~ C's floating point types are as follow:
+    ~ floats are single precision floats, typically 32 bits
+    ~ doubles are double precision floats, typically 64 bits
+    ~ long doubles are even bigger floating point numbers
+
+~ floating point numbers default to doubles unless an f or l is appended
+
+~ single precision ~= 6 digits of precision, double precision ~= 15 bits of precision
+
+~ the main reason to use a float would be in order to save memory
+
+~ floating point values are not perfectly exact, and can produce somewhat different values on different machines. This is why floating numbers should generally be compared using inequalities
+
+~ C uses /* ... */ to comment. Many C compilers support // comments, but aren't technically C
+
+~ a variable declaration reserves an area in memory which will hold a particular value
+
+~ = is the assignment operator, which takes the value on the right and assigns it to the value on the left
+
+~  truncating an int to a char will leave only the lower eight bits of the number, and truncating a float to an int will drop the fractional part of the number (so it always rounds down)
+
+~ C has no boolean type, so ints are used, with 0 being false and any non-zero value being true
+
+~ Operators are sensative to type (i.e. 6/4 = 1, 6/4.0 = 1.5)
+
+~ C has ++ and --, which can be placed before or after a value, with the following difference:
+    ~if i=10, then j=i++ + 6 = 16, and j=++i + 6 = 17
+
+~ = is used for variable assignment, == is used to compare for equivalence NOTE: a statement such as if (x=3) will compile fine, as it will just set x to 3, which means true
+
+~ Bitwise operatior manipulate memory on the bit level (useful for writing OS's or hardware)
+    ~ ~ : negatation i.e. 0 -> 1, 1->0
+    ~ & : and
+    ~ | : or
+    ~ ^ : exclusive or
+    ~ >> : Right shift by right hand side (RHS) (divide by power of 2)
+    ~ << : Left shitft by RHS (multiply by power of 2)
+
+~ Bitwise operators are not logical operators (&&/||)
+
+~ Bitwise operators take precedence over logical operators
+
+~ C has many shorthand assignment operators
+    ~ +=/-= : increment or decrement by RHS
+    ~ *=//= : Multiply or divide by RHS
+    ~ %= : Mod by RHS
+    ~ >>=/<<= : Bitwise right/left shift by RHS
+    ~ &=/|=/^= : Bitwise and/or/xor by RHS
+
+#Section Two: Control Structures#
+
+~ if statements take an expression and run if it is met, with the option to include an else block
+
+~ The switch statement can be used to execute different snipits of code if a given integer takes different values, and can also execute a default option in case no case is met. Must end with break
+
+~ while loops check an expression, and continue to execute so long as that expression is true
+
+~ a do-while loop functions like a while loop, except that it checks the expression at the end of the execution (meaning the code will always execute at least once)
+
+~ a for loop consists of (initialization; continuation; action), with initialization occuring before the first run, continuation occuring before every run, and action occuring at the end of every run
+
+~ a for loop can have multiple expressions which are seperated by commas
+
+~ breaks can be used, although they are considered stylistically unappealing and are a frequent source of error, and should be avoided unless necesary
+
+~ a continue statement can be used to force a block to jump to the bottom of a loop, skipping code below it. Also considered to be stylistcally inferior
+
+#Section Three: Complex Data Types#
+
+~ a struct is an object which has subfields which can be specefied, and are a convenient way to group related data together into a single object
+
+~ structs use periods to access fields from within a struct
+
+~ arrays hold arbitrarily large groupings of the same kind of data (i.e. ints)
+
+~ when a value is declared but not defined, it is given an arbitrry placeholder value until one is assigned to it
+
+~ C will not warn when you go out of bounds of an array, and instead reads whatever memory happens to be located--but owned by somethind else--at the end of your array, causing unexpected behaviours and crashes
+
+~ multi-didmensional arrays can be declared, which are all stored in a single contiguous block of memory, rather than multiple distinct one dimensional arrays at varying random locations
+
+~ it is most memory efficient to access elements in memory close to the one you just accessed, so the most efficient way to read through an array is to cary the rightmost index most frequently
+
+~ arrays can contain structs (there elements can be accessed as such: arrayname[index].structelement)
+
+~ a pointer is a value whose purpose is to reference another value
+
+~ * is used to denote a pointer, and can be placed anywhere between the type and name declarations (i.e. int* ptr, int * ptr, and int *ptr are all identical)
+
+~ a * to the left of a pointer dereferences it to retrieve the value which it points to
+
+~ -> to the right of the pointer can be used to access the fields of a struct
+
+~ & is used to set a pointer to point to a given portion of memory in either the the stack or the heap (i.e. int *p; int i; p = &i;, p now points to i)
+
+~ a local variable only exist so long as the function it exists within is being executed
+
+~ a pointer with no pointee can be assigned to the value 0, or more typically the value NULL, which takes a value of 0 (this also means that it will evaluate to false)
+
+~ in order for a pointer/pointee relationship to function properly:
+    ~ the pointer must be declared and allocated
+    ~ the pointee must be declared and allocated
+    ~ the pointer must be initialized so it points to the pointee
+
+~ it is a common error to only declare the pointer, but not the pointee and no link, which will usually compile fine but will wreak havoc during runtime, as the pointer will just point to some random piece of memory
+
+~ declaring a pointer allocates space for the pointer within the memory, but not the pointee
+
+~ C has minimal string support; generally strings are just arrays of chracters with an additional "null" character (\0) stored after the last character in the array, marking the "strings" end
+
+~ C does have a standard library with string functions, but the programmer must manage the string memory and call the correct functions
+
+~ a method such as strcopy, which copies the bytes of one string to another mimics the arguments of '='
+
+~ a = can not be used for string copying in the same way that ints can. strcopy must be used instead
+
+~ space must be left for the trailing \0 within strings (i.e. char myString[10] could only contain a string of length 9)
+
+~ "buffer overflow" security problems and bugs can arise when too many objects are allocated to a given array
+
+~ in order to avoid buffer overflow attacks, production code should check the size of data before it is placed to make sure it will fit
+
+~ because of the way C handles memory, the type of a char[] is essentially char*
+
+~ typedef can be used to create a shorthand name for a type (i.e. typedef struct fraction Fraction, which would allow Fraction variables to be declared in place of struct fractions)
+
+#Section Four: Functions#
+
+~ C functions are defined in a single text file and then all functions in the program are put together into a single, flat namespace
+
+~ C begins its execution with a "main" function
+
+~ a "static" function can only be called from the file wherin it is declared
+
+~ any parameters passed to a function or declared within a function will only exist so long as the function they are being called for is running, afterwards they are dereferenced
+
+~ in C arguments are passed by value
+
+~ the return command returns the value specified and then exits the function. Forgetting to include a return statement for certain function outcomes is a common source of bugs
+
+~ if a function will return nothing, void must be specefied. A void* may also be specified in order to force bodies of code to not depend on each other
+
+~ passing by value has two major disadvantages:
+    ~ since the formal and actual parameters are distinct memory locations, changes made to the formal paramter will not apply to the actual parameter
+    ~ it can sometimes be unwieldy and mechanically taxing to copy the actual parameter to another memory location
+
+~ in order to pass values by reference, simply specify in the function header that pointers should be passed to the function
+
+~ if you then want to permanently modify these values, simply dereference them to access their memory directly
+
+~ the const keyword can be used to declare that a variable will not be changed, which can help to clarify the intention of a function
+
+#Section Five: Odds and Ends#
+
+~ on compile, all files and libraries are put together into a single program file, which must contain exactly one main() function which will be used by the OS as the entry point
+
+~ if compiling is successful, 0 is returned, and a non-zero value is there was an error (a convention which makes sense in shell oriented environments such as Unix or DOS)
+
+~ in pre-ANSI C callers did not need to see a prototype before calling, resulting in crashes
+
+~ In ANSI C:
+    ~ static functions does not need a prototype so long as they are defined before/above where they are called
+    ~ the compiler requires a prototype for non-static functions in order to verify the two are in agreement
+
+~ preprocessing happens before C source code is sent to the compiler
+
+~ #define is used to set up symbolic replacements in source (i.e. after #define MAX 100, MAX could be called in place of 100)
+
+~ #include is used to bring in text from outside files during compilation (it does this by simply pasting the text from the specified file into the file it is called from)
+
+~ within #include statements, "..." specify user files and <...> specify system files
+
+~ it is universally followed convention that for a file foo.c:
+    ~ a seperate foo.h file will contain foo.c's prototypes
+    ~ foo.c will include the line "#include "foo.h"" near the top in order to make available the prototypes, following the "prototype before definition" rule
+    ~ any file which calls a function from foo.c must #include foo.h in order to see the prototypes and conform to the "clients must see prototypes" rule
+
+~ #if/#else are used as typical if/else statements but during the preprocessing. Must be concluded with a #endif
+
+~ #pragma once is used to make sure that a given .h file is only imported once (note: this is a feature which is only supported by some compilers)
+
+~ the assert() function can be used to check that certain conditions are met, thereby avoiding bugs arising from unexpected behaviour
+
+#Section Six: Advanced Arrays and Pointers#
+
+~ array names act like pointers to the first elements within that array
+
+~ by then specifying you desire array[n], the machine takes the address of the 0th element, and adds n * element_size (which is known to the machine and constant) to calculate the offset of the nth element from the base element
+
+~ + syntax is used to produce a pointer to a given index of an array rather than the value at the index itself 
+
+~ any pointer type can be vast to any other pointer type to change the code the compiler generates
+
+~ the C compiler makes no meaningful distinction between arrays and pointers
+
+~ C things of single values as arrays with only one value in them, so if you were to set up a pointer to such a value,[] syntax could be used to specify that element
+
+~ you can make references to arrays which are out of bounds, but it will simply manipulate the memory which is around where the array is stored, which can lead to serious bugs
+
+~ the base address of an array behaves as a constant pointer: it cannot be changed
+
+~ C allows you to manually allocate and deallocate dynamic heap memory, although doing proves difficult for many porgrammers
+
+~ the file stdlib.h includes the functions to do manual heap allocation, such as:
+    ~ void* malloc(size_t size), which requests a contiguous block of heap memory and returns a pointer to that location (void* denotes it will be a pointer with no specified type, which means it will likely need to be cast prior to use)
+    ~ void free(void* block), which takes a block previously allocated by malloc() and returns it to the heap for future use
+    ~ void* realloc(void* block, size_t size), which takes an existing heap block and tries to relocate it to another heap block
+
+~ malloc() can be used to allocate arrays, with the only distinction between this method and typical array declaration is the former resides in the heap wheras the latter is in the stack
+
+~ an array allocated on the heap will exist until explicetly deallocated with free(), and the size can easily be changed using realloc() (old elements will even be retained!)
+
+~ the disadvantage is that getting the allocation and freeing wrong can have issues which will be overlooked by the compiler, and you explicetly need to deallocate the space when done with it
+
+~ heap allocation of memory is particularly beneficial for strings, as size can be set at runtime, thus avoiding memory being reserved but never used 
+
+#Section Seven: Details and Library Functions
+
+~ unary operators and assignment operators are the only aspects of C which are red right to left
+
+~ there are many standard C libraries which the compiler will typically link automatically: they include:
+    ~ stdio.h, which handles file input and output
+    ~ ctype.h, which handles character tests
+    ~ string.h, which handles string operations
+    ~ math.h, which includes mathematical functions such as sin() and cos()
+    ~ stdlib.h, which includes utility functions such as malloc() and rand()
+    ~ assert.h, which handles the assert() macro
+    ~ stdarg.h, which provides support for functions with variable numbers of arguments
+    ~ setjmp.h, which provides support for non-local flow control jumps
+    ~ signal.h, which provides support for exceptional condition signals
+    ~ time.h, which handles date and time
+    ~ limits.g, float.h, which provides constants which define type range values such as INT_MAX
+
+~ stdio.h is a very common file, and includes the functions:
+    ~ fopen, which opens a file in read, write, or append mode
+    ~ fclose, which closes a previously opened file
+    ~ fgetc, which reads and returns the next unsigned char out of a file
+    ~ fgets, which reads the next line into a provided string (\n is included)
+    ~ fputc, which wrutes the char to the file as an unsigned char
+    ~ ungetc, which pushes the most recent fgetc() char back to the file
+    ~ printf, which prints a string (but no newline), a format string of text and %, denoting values to be inserted by the arguments which follow the format string in the function call, with
+        ~ %d denoting an int
+        ~ %Ld denoting a long int
+        ~ %s denoting a string
+        ~ %f denoting a double
+        ~ %c denoting a char
+    ~ scanf, which reads characters from standard input, trying to match to the format string
+
+~ ctype.h includes macros for doing simple tests and operations on characters, such as
+    ~ isalpha, which tests if a given value is upper or lower case
+    ~ islower, which tests if a given value is lower case
+    ~ isupper, which tests if a given value is upper case
+    ~ isspace, which tests if a given value is a whitespace character
+    ~ isdigit, which tests if a given value is a digit
+    ~ toupper, which changes a given value to uppercase
+    ~ tolower, which changes a given value to lowercase
+
+~ string.h inclludes routines to be executed on strings (memory allocation is not checked as this happens)
+    ~ strlen, which returns the length of the passed string
+    ~ strcpy, which copies the characters from a source to a destination string
+    ~ strlcpy, same as strcpy, but also knows the size of the destination, allowing it to truncate the string if necesary
+    ~ strcat, which appends the source to the end of the destination string
+    ~ strcmp, which compares two strings and returns an int denoting their ordering
+    ~ strchr, which searches a string for the first occurence of the passed character
+    ~ strstr, same as strchr, but searches for the first occurence of a passed string
+    ~ memcpy, which copies the passed number of bytes from source to destination
+    ~ memmove, same as memmove, but allows overlap of memory allocation
+
+~ strlib.h includes numerous basic utility functions, such ass:
+    ~ rand, which returns a sudo-random integer
+    ~ srand, sets the seed which rand will use to generate "random" values
+    ~ exit, which exits the program and passes a condition int to the system
+    ~ bsearch, which does a binary search in an array of elements
+    ~ qsort, which sorts an array of elements based upon a passed comparison function
+
+###Keywords###
+
+~ "width" : refers to the amount of bits required to implement a type
+~ "promotion" : the process of upgrading a certain value so that it is the same as another value it must interact with (i.e. a 16 bit int would be promoted to 32 bit to interact with a 32 bit long)
+~ "truncation" : moving a value to a smaller type, dropping the most significant bits
+~ "ternary operator" : ?, i.e. 1 ? 2 : 3, meaning if 1 then 2, otherwise 3
+~ "struct" (or "record") : an object which has subfields of various datatypes
+~ "pointee" : the value which is referenced by a pointer
+~ "actual parameter" : the expression passed to a function
+~ "formal parameter" : the parameter local to a function
+~ "by value" : actual parameters are copied just before function execution, and a formal parameter is created; the caller and callee will share no memory
+~ "by reference" : references to a parameter are passed to  a function, meaning that there will only be one copy of a given value
+~ "callee" : a function which is called
+~ "prototype" : the name and arguments--but not body--of a given function
+~ "user file" : a file in the originating directory of a compile
+~ "system file" : a file in the compilers directory somewhere
+~ "base address" : the address of the first element within an array
+
+###Additional Resources###
+
+~The C Programming Language, by Kernighan and Ritchie
+~http://cslibrary.stanford.edu/102/ a.k.a. Pointers and Memory
+~http://cslibrary.stanford.edu/103/ a.k.a. Linked List Basics

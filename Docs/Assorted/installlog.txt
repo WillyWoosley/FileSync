@@ -1,0 +1,6 @@
+'SynPS/2 Synaptics Touchpad':
+    from: Synaptics Finger: 25, 30, 0
+    to : Synaptics Finger: 50 90 255
+link for help: https://askubuntu.com/questions/483707/14-04-touchpad-is-too-sensitive
+
+tmux installed
