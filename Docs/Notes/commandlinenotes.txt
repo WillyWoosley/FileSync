@@ -1,0 +1,61 @@
+###Learning the Command Line###
+###Source : https://www.codecademy.com/learn/learn-the-command-line###
+
+#Commands#
+ ~ pwd : lists current directories filepath
+ ~ ../DIR : goes up a directory, and navigates to DIR from there
+ ~ touch FILENAME : creates empty file FILENAME
+ ~ ls -l : long-format -l output
+	~ Columns signify (in order) access rights, # of children, owner, group owner, bytesize, date/time
+	last modified, filename
+ ~ ls -f : lists by time last modified
+ ~ cp : copies a file or directory
+ ~ rm -r : removes files recurrsively, i.e. it removes a directory as well as all of its children
+ ~ echo : accepts a string as a param and echoes it back to the terminal
+ ~ > : pipes standard input into a file, overwriting
+ ~ >> : pipes into file, appending
+ ~ cat : outputs the contents of a file to the terminal
+ ~ < takes standard input from a file and inputs it to the command on the left
+ ~ | : pipes the standard output from the command on the left as standard input to the command on the left
+ ~ wc : outputs the number of (in order) lines, words, and characters in a file
+ ~ sort : sorts standard input alphabetically and outputs it
+ ~ uniq : filters out adjacent identical elements from a standard input and outputs it
+ ~ grep : searches files for lines that match a pattern and outputs the matches
+ ~ grep -i : makes grep case insensitive
+ ~ grep -R : greps all files in a directory, including inside files
+ ~ grep -Rl : same as grep -R, but for file output only outputs the filename, not the filename and line
+	which matches
+ ~ sed : takes an input and modifies it based on a passed expression and outputs
+ ~ nano : command line text editor akin to vim or emacs
+ ~ source : immediately applies the changes from an rc file to the current session
+ ~ history : displays all commands given to the terminal in the terminals memory
+ ~ env : lists environment variables for the current user
+
+#Environment#
+ ~ .bash_profile : file used to store environment settings, loaded on session start
+ 	~ alias NEW="OLD" : used within rc to define an alias NEW to replace a command OLD
+	~ NAME="VARIABLE" : creates an enviroment variable NAME which holds VARIABLE
+	~ export : makes an environment variable available to all child sessions
+ ~ ~ : denotes home directory
+ ~ $ : used ot return an environment variable
+ ~ HOME : environment variable which holds the home directory
+ ~ PS1 : environment variable which holds the variable defining the makeup style of the command prompt
+ ~ PATH : environment variable that holds a list of directories which contain scripts for the 
+	commandline to execute
+#Notes#
+ ~ options can (by default) be strung together (i.e. ls -alt)
+ ~ multiple files or directories can be copied to a directory with a single cp command
+ ~ multiple files can also be moved into a different directory at the same time as well
+ ~ standard input (stdin) is information inputted to the terminal through the keyboard or input device
+ ~ standard output (stdout) is information outputted after a process runs
+ ~ standard error (stderr) is an error message output by a failed process
+ ~ by calling sort and piping the output into unique, all identical elements can be removed, not just
+	adjacent ones
+ ~ grep stands for "global regular expression print"
+ ~ sed stands for "stream editor"
+ ~ a sed expression looks like this: 's/BEFORE/AFTER/g', with s signifying substitution, BEFORE signifying
+	what should be replaced, and AFTER signifying what it will be replaced with, and 'g' signifying
+	that the replace should happen globally (i.e. it should not just replace the first instance of
+	BEFORE per line)
+ ~ an environment variable is a variable which can be used across commands and programs which holds
+	information about the environment

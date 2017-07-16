@@ -1,0 +1,16 @@
+###Temp to-do:
+ //Terminal coloring
+ ~ Write tracking app (manual input, python for now)
+   ~ Figure out what/how to daemon
+ //Get multiplexer working
+ ~ Find way to share docs between desktop and laptop (rasberry pi?)
+ ~ Find what displays HTML anchor tags (NeoVim?)
+ ~ Get monitors oriented correctliy
+ ~ Move windows between desktops from keyboard
+ ~ Look into VPN
+ ~ Get syncing between machines (Reimmina?)
+ ~ Get logging for dict
+ ~ Get logging for URL's (URLLogger, 20 -> 10)
+ ~ Better C syntax highlighting
+ ~ Get vimrc from laptop
+	~ Get git and sharing for files such as this

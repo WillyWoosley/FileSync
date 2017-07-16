@@ -1,0 +1,21 @@
+less - text pager enabling you to page within a plaintext file
+zlezz - less, but for use with .gz (compressed) plaintext files    
+.gz - extension for a compressed simple text file
+.ps - PostScript file format
+.html - html file format 
+links - used to read files of the .html format
+gv - used to read files of the .ps format
+.pdf - Portable Document Format file format
+evince - used to read documents of the .pdf format
+maw@home:~/Documents$ ls
+nethack-343-Guidebook.txt  ubuntunotes.txt
+maw@home:~/Documents$ cat ubuntunotes.txt 
+less - text pager enabling you to page within a plaintext file
+zlezz - less, but for use with .gz (compressed) plaintext files
+.gz - extension for a compressed simple text file
+.ps - PostScript file format
+.html - html file format
+links - used to read files of the .html format
+gv - used to read files of the .ps format
+.pdf - Portable Document Format file format
+evince - used to read documents of the .pdf format
