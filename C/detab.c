@@ -4,12 +4,19 @@
 
 int main() {
 
+    char c;
+    int len = 0;
+
     while ((c = getchar()) != EOF) {
         if (c == '\t')
-            for (int i=0; i<TABLEN; i++)
+            for (int i=0; i < TABLEN; i++) {
                 putchar(' ');
-        else
+                len++;
+            }
+        else {
             putchar(c);
+            len++;
+        }
     }
 
     return 0;

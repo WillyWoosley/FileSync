@@ -1,0 +1,145 @@
+###Chapter One###
+1.1
+The first important idea mentioned in chapter one is the concept that "all computers are created equal" i.e. just because a
+given computer has more RAM or a more modern CPU does not mean it computes any differently than any other computer;
+all computers compute in identical ways, only speed varies with improved or more modern hardware
+
+The second idea is that human commands must undergo some sort of transformation in order for them to be compatible with the low
+level "electrons running around" model which computers operate off of. Only after this transformation from natural language
+to a much lower level is the computer able to do anything with commands fed to it by a human
+
+1.2
+A higher level langauge does not instruct a computer to compute any more than a lower level one, as both will ultimately be
+converted to much lower levels than they start out at. The starting point is irrelevant, all languages are going to be converted
+to the same low level in the end.
+
+1.3
+Digital computer design has won out because it allows for much greater precision and manipualtion than do their analog counterparts
+
+1.4
+Natural language allows for far to great a range of interperitation to be converted one to one into a programming language;
+any one sentence can be interpereted a multitude of ways, and conversely any one task can be described in a similar plethora
+of variations
+
+1.5
+a.
+((a, x) -> Box (b), b) -> Box (a)
+b.
+(((w, x) -> Box (a), (y, z) -> Box (a)) -> Box (a), .25) -> Box (b)
+c.
+((a, b) -> Box (a), (a, b) -> Box (a)) -> Box (b)
+
+1.6
+A sentence such as "I walked with Jane from 41st to 5th" exemplifies the immideate problem with natural language, as it is possible
+to interperet that either Jane and I walked from 41st to Fifth, or that Jane, who resides on 41st, walked with  me from an
+unspecified location to Fifth.
+
+1.7
+Generally speaking, a statement such as "take me to the airport" simplifies the task, because you do not need to tell your
+driver every minuta of how to find his way to the airport, and how fast to go, as you trust he can handle this. However,
+this can hypothetically also lead to negative consequences should one of the subtasks be executed inaccuratley. Say for example
+your taxi driver is fresh off the boat from England, and forgets both that speeds here are posted in MPH and that we drive on the
+right. Or say he doesn't realize exactly what you mean when you say "the airport," and takes you to SJC rather than your intended
+destination of SFO.
+
+1.8
+This could be interepereted as John seeing some man in the park through his telescope, as John seeing a man in possession of a 
+telescope using it in the park, as John seeing the man somewhere not in the park while he (John) uses his telescope in the park,
+just to enumerate a few. This should make it immideatley evident that natural language is far too imprecise to be used to instruct
+a computer to do anything, as a computer could not be expected to extract any one meaning from this sentence without any other input
+
+1.9
+Natural languages are capable of expressing languages to other speakers of natural languages, but not to computers directly.
+
+1.10
+Algorithms are: a) finite, b) definite, and c) computable. This means that they are defined to complete at some point, rather than
+running on forever, that they have clearly specified steps that they must 4exewcute before they are able to finish, and that these
+steps are something which a computer is in fact able to compute.
+
+1.11
+a) finite:
+a program which added one to some counter with no specified end conditions would not count as an algorithm, as it would keep running
+on "forever" (until the computer ran out of memory), therefore prohibiting it from being an algorithm
+
+b) definite
+a program which required a computer to make any sort of judgement call, such as "continue once the number you are operating on is
+sufficiently large" without specifying what "large" denotes would violate the algorithmic principle of definiteness
+
+c) computable
+something such as "compute the exact value of pi" would violate this principle, as it would require the computer to compute something
+which has thus far proved to be uncomputable
+
+1.12
+a.
+This satisfies the criterion of an algorithm
+b.
+This does not qualify as an algorithm, as neither the natural or prime numbers have any defined end
+c.
+This satisfies all the criterion of an algortihm
+d.
+This satisfies the criterion of an algorithm
+e.
+This satisfies all the criterion of an algortihm
+
+1.13
+Both should be able to solve the same amount of problems, as the ability to run any number negative means that Computer B would
+simply be able to add negative numbers rather than subtract them outright.
+
+1.14
+a.
+# Sorting Algorithms * # Languages * # ISA * # microarchitectures = 4 * 4 * 2 * 3 = 96 Options
+b.
+Algorithm #1 -> C -> x86 -> x86 Microarchitecture #1
+Algorithm #2 -> C++ -> x86 -> x86 Microarchitecture #2
+Algorithm #3 -> Fortran -> SPARC -> SPARC Microarcitecture #3
+c.
+The same amount, as there are stil the same amount of potential options that could be followed
+
+1.15
+One advantage iof using a higher level language is that, since there is more abstraction in play, you don't need to be as explicit
+about every single thing that you want the computer to do. On the other hand, this also means that you have less direct control
+over what the computer does, and you will also have less of a conception as to what the computer is actually doing, meaning
+that if a situation arises where you do need to be more explicit or nuanced with what you want the computer to do it can
+be difficult.
+
+1.16
+Data types, addressing modes, and the number of unique locations within a computers memory are just some of the fields which
+are specified by a microarchitecture
+
+1.17
+The ISA is higher level than a microarchitecture, and as such, needs be less specififc. It is a standard interface that people
+can interact with in order to get a computer to do what they want. Microarchitectures on the other hand are more subject to
+variation based upon the exact model hardware you get. It deals with actually providing all the functionality which an ISA
+promises will be present within a computer
+
+1.18
+Most microarchitectures typically only implement a single ISA, wheras an ISA generally has a plethora of microarchitectures which
+are conformant to its standards
+
+1.19
+The levels of transformation are Problems (such as what is the product of these two numbers), Algorithms (such as the process
+which will be gone through in order to add two numbers), Languages (such as C, Java, Python, Rust, etc.), ISA (such as x86
+or SPARC), Microarchitecture (such as Pentium, Skylake, etc.), Circuits (such as XOR, AND, etc.), and Devices (such as
+iPhones, Laptops, etc.)
+
+1.20
+Generally it holds that these are levels of abstraction, although they do not start at the most simplistic level, and
+Devices suddenly become much more concrete than Circuits at the end of the flow, so it would be an imperfect characterization,
+but it more or less holds..
+
+1.21
+The software you buy is likely in the highest level of abstraction which it can be while still informatively communicating to the
+computer, in this case a language. It is likely in this form because the lower level you go the more specialized the software will
+be, leading to incompatibilities from machine to machine. The higher level you go, the eassier it is to program as well. When
+you are programming your software, you needn't worry about the exact processes the computer goes through to add two numbers when
+all you have are electrons.
+
+1.22
+I believe the most difficult step would be to take a Language and change that to ISA, as this is where the leap from sofftware to
+hardware occurs, making the final jump from something which still resembles natural language to a purely physical dillema
+
+1.23
+Since the ISA is the interface between the hardware and the lowest level languages and software, a change in ISA structure would
+mean that everything would suddenly become incompatible with it since it no longer functioned using the same outwardly facing
+standards
+

@@ -1,0 +1,56 @@
+###Chapter One###
+- All computers, regardless of speed/processing power, compute exactly the same, just at variable speeds
+- All problems within the computer are solved by electrons moving from place to place within the machine;
+    everything beyond that is abstraction on our part
+- a black box model provides no information as to how a task is carried out, only the inputs and the ouputs;
+    the black box is assumed to work as intended
+- the levels of abstraction are (in order): Problems; Algorithms; Language; Machine (ISA) Architecture; Microarchitecture; 
+    Circuits; Devices
+- compiers convert from high level languages to something interperitable by the ISA
+- cars provide a good analogy for the ISA/microarchitecture relation: the ISA describes what a driver sees as they sit and drive;
+    all cars (but not boats or planes) provide the same ISA; what happens under the hood is the domain of the microarchitecture
+
+###Chapter Two###
+- computers operate based upon the presence or absence of a voltage between two points (a 1 or a 0)
+    - it operates on presence rather than exact voltage simply because this is more difficult to measure
+- the "absence" of a voltage simply means a value close, but not necesarily equal to zero; conversely presence merely means
+    a value distant from zero
+- using this method, given k bits, we can differentiate between 2^k distinct patterns of zeros and ones
+- each ISA has its own data types and its own ways of operating on them
+- unsigned integers can be represented as strings of binary digits
+- much as the decimal digit 329 stands for (3*10^2) + (2*10^2) + (9*10^0), the decimal digit 00110 represents (0*2^4) + (0*2^3) +
+    (1*2^2) + (1*2^1) + (0*2^0)
+- 
+#################
+
+###Key Terms###
+
+Turing's Thesis: Turing's thesis is that every computation van bve poerformed by some such black box (also referred to as a 
+Turing machine)
+
+Black Box/Turing Machine: a proposed computer like object which would take some input and produce some output, with no regard
+given to the actual processes conducted within this hypothetical machine
+
+Levels of Transformation: the "Levels of Transformation" are the steps gone through to move from electrons up to computers
+
+Analog Machine: analog machines are machines which measure a physical quality, such as distance or voltage
+
+Digital Machine: digital machines are machines which compute by manipulating a fixed, finite set of integers or characters
+
+Algorithm: an algorithm is a step-by-step procedure that is guarunteed to terminate
+
+Effective Computability: effective computability refers to the concept that a computer is able to execute a specified command
+
+Microarchitecture: the organization of an ISA implementation is called its microarchitecture
+
+Bit : short for binary digit: a 0 or 1; the absence or presence of a voltage
+
+Data Type: a distinct way of representing data which has specific information encoded within it such that a computer can operate
+upon it
+
+Signed MAgnitude Data Type: a data type which is signed using a leading bit
+
+Arithmetic and Logic Unit (ALU): a basic logic mechanism which takes two binary bit patterns and producing a bit pattern as its output
+which is tthe sum of the input patterns
+
+################

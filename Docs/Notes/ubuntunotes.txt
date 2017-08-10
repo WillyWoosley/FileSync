@@ -1,87 +1,293 @@
 ~Notes:
- - man xorg.conf contains important information about graphical/desktop setting configuration
- - The important components of the xorg.conf are : ServerLayout, Files, Module, Input Device,
+  ~ man xorg.conf contains important information about graphical/desktop setting configuration
+  ~ The important components of the xorg.conf are : ServerLayout, Files, Module, Input Device,
     Monitor, Device, Screen
-    - ServerLayout deals with display and screen layout, and names input devices
-    -Files deals with session colors and port numbers
-    -The Module section specifies loadable modules and drivers to load
-    -The InputDevice section deals with device configuration
-    -Monitor configures the default display device
-    -Device provides details about video graphics chipset
-    -Screen ties together much of the data from the previous sections
--Lenses are the different filters which can be applied to the Dash
--The launcher is the bar on the left
--The panel is the bar on top
--apt-get will never removes or adds software
--apt's install will sometimes recommend packages to install, to install these say n to continue
+    ~ ServerLayout deals with display and screen layout, and names input devices
+    ~ Files deals with session colors and port numbers
+    ~ The Module section specifies loadable modules and drivers to load
+    ~ The InputDevice section deals with device configuration
+    ~Monitor configures the default display device
+    >Device provides details about video graphics chipset
+    >Screen ties together much of the data from the previous sections
+>Lenses are the different filters which can be applied to the Dash
+>The launcher is the bar on the left
+>The panel is the bar on top
+>apt-get will never removes or adds software
+>apt's install will sometimes recommend packages to install, to install these say n to continue
     and then reinitialize the install with the suggested package name at the end of the command
--If you run apt-get install with a package you already have installed, apt treats it as apt-get
+>If you run apt-get install with a package you already have installed, apt treats it as apt-get
     update instead
--.tar files (referred to as tarballs) are files which have been compressed using gzip or bzip
+>.tar files (referred to as tarballs) are files which have been compressed using gzip or bzip
+> a root user is a user who inherently has super-user priveleges for every command, without having to add sudo
+> man pages are stored in places like usr/share/man and usr/local/share/man
+> the basic linux directories are ordered as such (can be found with man hier) :
+    > / : the root directory
+    > /bin : essential commands
+    > /boot : boot loader files, Linux kernel
+    > /dev : device files
+    > /etc : system configuration files
+    > /home : user home directories
+    > /lib : shared libraries, kernel modules
+    > /lost+found : directory for recovered files (if found after a file system check)
+    > /media : mount point for removable media, such as DVDs and floppy disks
+    > /mnt : usual mount point for local, remote file systems
+    > /opt : add-on software packages
+    > /proc : kernel information, process cojntrol
+    > /root : super user (root) home
+    > /sbin :system commands (mostly root home)
+    > /srv : holds information relating to services that run on your system
+    > /sys : real-time information on devices used by the kernel
+    > /tmp : temporary files
+    > /usr : software not essential for system operation, such as applications
+    > /var : variable data (such as logs); spooled files
+> commands in /bin and /sbin are generally statically linked, which means the commands do nbot depend on other
+    software libraries residing in /lib or /usr/lib
+> most applications are dynamically linked, meaning they require external software to function
+> the commands in /bin and /sbin rarely if ever need to be changed, and are intentionally isolated, because this will make
+    it easy to see if changes have been made, as this could break the machine
+> the user and system data is segregated in order to prevvenet datra loss and makes backing up easier
+> in Unix everything is a file: data files, binary filkes, executables, inpout output devices, etc.
+> dirctories are ismply files which contains a list of other files and "directories" (more files)
+> hidden files (those which begin with a .) are hiudden by default, as they are susually config files and do not need to
+    be accessed very frequently
+> -l informations columns are as follows : filetype, link count, owner, group, filesize, last access time, filename
+> when using ocatl permission codes, 4 denotes read access, 2 denotes write access, nd 1 denotes execute access
+> this means that a file with a value of 6 would have read and write, but not execute access
+> programs with suid (set user id) or guid (set group id) access are files whcih can be used by any user as root, but
+    also pose a security risk for the same reason
+> the sticky bit is an additional permission which denotes who is able to rename/link/delete files (1 denoting root, 0 denoting any)
+> once something is removed using rm or rmdir, it is not easy/nigh impossible to recover, so be certain you want to delete things
+    before you do
+> the only way to remove a directory which contains anything is to use rm with the -r switch
+> renaming and moving something are the exact same thing in linux
+> more was one of the first text pagers in UNIX, but is now simply an alias for less
+> deleting an entire machine is as simple as sudo rm -rf /. You are afforded a lot of power. Use sudo with the utmost caution
+> in order for a user to have sudo access, they must be in the suo group and they must be listed in the etc/sudoers file
+> if root access is somehow removed, it can be recovered by booting into recovery mode (shift key during boot), select the menu
+    entry for root (Drop to Root Shell Prompt), and then solve the problem for there with the root privleges granted
+> within a file heirarchy, "leaves" refers to files within that tree, rather than other directories, which are "branches"
+> every directory has two special directories . and .., refering to the directory itself and its parent, respectively
+> piping is the process of chainging two or more commandling commands together
+> cat is how you would output a file to standard ouput, thereby allowing you to string it together with other commands
+> multiple files can be output using cat simply by specifying all of their names
+> the inode is the absolute location of data
+    >all files point to an inode
+> a hard link is two files which point to the same inode, meaning that if you modify one file, the other one is also modified
+    > this can be useful for backing up files, because if one file is deleted, the hard link will still be pointing to the inode,
+        so the data will be retained
+> a symlink (symbolic link)/soft link is simply a pointer which will redirect you to a different file
+    > this can be useful if you want to sometimes direct to one file, or sometimes direct to another, for example
+        a live vs. construction build
+> symlinks are used extensively in Linux, for example by deprecated programs to automatically point to their replacements
 
 ~Keyboard Shortcuts
-- Shift-Alt-Tab -> Reverse Alt-Tab
-- Alt-` -> Alt-Tab within multiple instances of one program
-- PrtScr to take a screenshot
-- Ctrl-Alt-Arrow Key to move between workspaces
+> Shift-Alt-Tab -> Reverse Alt-Tab
+> Alt-` -> Alt-Tab within multiple instances of one program
+> PrtScr to take a screenshot
+> Ctrl-Alt-Arrow Key to move between workspaces
+> Ctrl-Alt-F[1..6] : Switches to tty1-6; virtual consoles
+> Ctrl-Alt-F7 : Returns to the GUI
 
 ~Terminal Commands
--mkisofs : Used for burning ISO images
--cdrecord : Used for burning ISO images to CDs
--netpbm : Tools for image conversion/manipulation
--lspci : Lists PCI information
--sudo : Gives super user privleges
--apt-get : Ubuntu package manager; ATP
-    -update : Tells ATP to contact all servers its configured to use and download the latest
+> mkisofs : Used for burning ISO images
+> cdrecord : Used for burning ISO images to CDs
+> netpbm : Tools for image conversion/manipulation
+> lspci : lists PCI devices attached to the system
+> sudo : Gives super user privleges
+> apt-get : Ubuntu package manager; ATP
+    >update : Tells ATP to contact all servers its configured to use and download the latest
     list of file updates
-    -upgrade : Downloads any updates software
-    -dist-upgrade : Downloads and updates Ubuntu/Debian distribution
-    -install : Used to add new software; queries apt's list of software, finds a match, and
+    >upgrade : Downloads any updates software
+    >dist-upgrade : Downloads and updates Ubuntu/Debian distribution
+    >install : Used to add new software; queries apt's list of software, finds a match, and
     installs the software and all dependencies not already installed
-    -clean : Deletes DEB files that apt has cached
-    -autoclean : Same as apt-get clean, but only files that are beyond a certain age
-    -remove : Removes packages which you no longer want--as well as all packages which depend
+    >clean : Deletes DEB files that apt has cached
+    >autoclean : Same as apt-get clean, but only files that are beyond a certain age
+    >remove : Removes packages which you no longer want--as well as all packages which depend
     upon it (this is important, as it can mean that many files can be uninstalled in addition
     to the one you intend to uninstall)
-        --purge : Also removes the configuration files for a package
-    -purge : same as remove -purge
-    -autoremove : MISSING DEFINITION
-    -source : Gets the source of a repository
--apt : New simplified interface to APT, akin to apt-get. Entries will take the form
+        >-purge : Also removes the configuration files for a package
+    >purge : same as remove -purge
+    >autoremove : removes packages which were once installed as dependencies for other packages, but are no longer needed
+    >source : Gets the source of a repository
+>apt : New simplified interface to APT, akin to apt-get. Entries will take the form
+    >--dry-run : simulates what the command would do, useful for displaying what will be autoremoved
     APT COMMAND : APT-GET EQUIVALENT
-    -install : install
-    -remove : remove
-    -update : update
-    -upgrade : upgrade
-    -full-upgrade : dist-upgrade
-    -purge : remove -purge
-    -autoremove : autoremove
-    -purge : purge
--apt-cache : MISSING DEFINITION
-    -search : Searches repositories for a specified package
-        --n : specifies to only search filenames, rather than filenames and descriptions
-    -showpkg : Provides information on "reverse depends" (what other packages require or
+    >install : install
+    >remove : remove
+    >update : update
+    >upgrade : upgrade
+    >full-upgrade : dist-upgrade
+    >purge : remove -purge
+    >autoremove : autoremove
+    >purge : purge
+>apt-cache : MISSING DEFINITION
+    >search : Searches repositories for a specified package
+        >-n : specifies to only search filenames, rather than filenames and descriptions
+    >showpkg : Provides information on "reverse depends" (what other packages require or
         recommend a given package), dependencies, and functions that a package provides
--grep : MISSING DEFINITION
--tar : missing definition
-    --C : uncompresses tarballs
--file : Specifies filetype of a passed object
--make : Compiles parts of a larger program
-    -install : Installs self compiled software
-    -clean : Cleans install location of self installed software after a failed install attempt
-    -uninstall : Uninstalls self compiled software
--./configure : Compiles source code
+> grep : searches the filesystem for a specified file, folder, or string within a file
+    >-r : searches recursively
+    >-l : will only display the filename of a file with matching text
+    >-c : will print out every file searched and the number of matches at the end of the filename
+    >-v : returns things which do not contain the specified input
+    >-i : removes case sensitivity
+    >-n : returns the line number of each match
+    >-color : the matching input will be colored when outputed by grep
+>tar : missing definition
+    >-C : uncompresses tarballs
+>file : Specifies filetype of a passed object
+>make : Compiles parts of a larger program
+    >install : Installs self compiled software
+    >clean : Cleans install location of self installed software after a failed install attempt
+    >uninstall : Uninstalls self compiled software
+>./configure : Compiles source code
+>snap : software bundles packaged to work with the Snappy Ubuntu Core
+    >find : lists snap packages available for install
+    >install : installes specified package
+    >list : list installed snap packages
+    >refresh : updates a package
+    >remove : removes a package
+        > changes : lists changes to snap packages, such as install, update, or removal
+> sudo : grants super-user priveleges
+    -i : enters a user into root mode until exit is typed
+    passwd : allows a user to set up a root account by inputing passwords for such an account when prompted
+> man : provides documentation on a specified command
+> info : alternative to man, provides documentation on a specified command
+> apropros : searches for man pages pertaining to a specified keyword
+> whereis : displays the location of a specified command as well as the location of its documentation
+> ls : lists files within current directory
+    >-a : displays hidden files (files starting with a period)
+    >-A : displays hidden files, excluding . and ..
+    >-l : displays more information about files than just filename
+    >-h : use human readable sizes
+    >-r : reverse order
+    >-s : show sizes
+    >-R : lists subdirectories and all of their content as well
+    >--sort : sort the listing
+        >size : sort by size, largest first
+        >extension : sort by extension alphabetically
+        >time : sort by last access, newest first
+> cd : returns you to the home direcotry or to a specified subdirectory
+    .. : moves to the parent directory from current location
+    $HOME : moves you to the home directory
+        ~ : ibid (note, just typing cd accomplished the same thing)
+        - : returns you to your previous directory
+> pwd : displays filepath to current location
+> umask : lists default permissions
+> touch : used to create a file of the specified name
+> ln : used to create a hard link to a file
+    >-s : creates a symlink rather than a hard link
+> chown : used to change the owner of a file
+> chgrp : used to change access groups of files
+> mkdir : creates a direcotry with a specified name
+    >-p : allows you to create parent directories if they do not already exist
+> rmdir : removes a specified directory
+> rm : removes a specified file
+    -r : recursively removes files, allowing directories with contents to be deleted
+> newgrp : allows you to log into a new group
+> chmod : allows altering of file permissions
+    >+/-u : toggles user rwx
+    >+/-g : toggles group rwx
+    >+/-o : toggles rwx for those not in a files group
+    >+/-a : toggles rwx for all
+    >+/-r : toggles read
+    >+/-w : toggles write
+    >+/-x : toggles execute
+    >-c : prints out a list of all the changes made by a chmod command
+    >-R : enables recursive operation
+    >--reference : allows you to set the permissions of specified files to match those of a passed reference file
+    >octal : octal commands can be passed in place of r/w/x
+> umask : display rwx of current file, or change it by passing what you want subtracted from the octal 777 for rwx
+> find : used to find any files matching passed conditions  (directory to search in can be specified as the first parameter)
+    >-name : finds files of a specified name (case sensitive)
+    >-iname : same as name, but case insensitive
+    >-size : specifies how big the file should be, must include a value, and optionall +/- to indicate greater than or less than
+    >-not : specify criterion which should exclude files from being found
+    >-user : specify an owner for files to be found
+    >-perm : specify permission sets of files to be found, specified in the same way as the chmod command
+    >-exec : allows a command to be executed every time a match is found (must be terminated with a \, found filename specified with{})
+> getfacl : displays the ACL for a specified file
+> setfacl : allows you to add indicidual users and groups with specific permissions
+    >-m : modify user/group permissions
+    >-r : remove user/group permissions
+    >u/g/o/m: /NAME: /PERMISSIONS : add a user (u), other (o),  or group (g) of NAME (not necessary for u)  with PERMISSIONS;
+        specifying m will mask other options, meaning that regardless of other settings your settings will override them
+> mv : moves a specified file to another file, either moving it to a different location or simply renaming it
+> cp : copies a specified file into a specified file
+    >-u : copies a file only if it does not exist in/at the location or if it has been modified
+    >--parents : copies a file as well as its entire filepath
+> cat : outputs the contents of a file
+    >-n : numbers the output lines
+    >-s : reduces multiple blank lines within a file to a single blank line
+> less : outputs the paged contents of a file, meaning it stops every time the text would flow off the screen
+    ON INVOKE
+    >-M : enables verbose prompting in less
+    >-N : enables line numbering
+    >+ : allows you to pass commands to less to execute as soon as it has started
+    WITHIN
+    >/ : searches forward for the specified input (search all open files by /*)
+    >? : searches backward for the specified input (search all open files using ?*)
+    >n : goes to next match
+    >N : goes to previous match
+    >NUMg : goes to line NUM
+    >NUMp : goes to the NUM percent point in the file
+    >'LETTER : allows you to place a marker within the file, which can be jumped back to by inputing ' and the same LETTER
+    >v : opens your file in your text editor, defaults to vim
+    >:n : goes to the next open file
+    >:p : goes to the previous open file
+    >:e : opens another file of specified name
+    >:d : closes a file
+    >! : opens a shell for executing commands in, where % refers to the current file. exited using exit
+    >!! : execute last shell command
+> visudo : checks for accuracy after a write, useful when dealing with sensetive files such as sudoers
+> exit : exits commandline
+> adduser : quickly creates a new user of specified name
+> passwd : sets the password of a specified user
+> deluser : deletes a specified user
+    >--remove-all-files : removes all of a users files as well
+    >--remove-home : removes a users home directory as well
+> shutdown : shuts the system down
+    >-h : halts the machine
+    >-r : restarts the machine
+    >now/0 : indicates to execute the specified command immediatley
+> du : prints the size of each file and directory in the current location
+    >-a : print the size of indicidual files as well as directories
+    >-h : outputs "human-readable" sizes, rather than raw bytes
+    >-c : prints total size of files
+    >--exclude : specifies a certain filname to exclude (uses shell expressions rather than regular exxpressions)
+    >-X : identical to --exclude, except for a file is specified which contains a list of filenames to be excluded
+> emacs : used to edit a specified file
+> locate : finds specified file within an index of all files created by a cron (fast, but not up to the minute accurate)
+    >-i : disable case sensitivity
+> nano : used to edit a specified file
+> sort : sorts a specified file based upon specified criterion and outputs the results
+> ssh : connects to other machines using a secure shell connection
+> tail : prints the last lines of a file
+> vim : used to edit a specified file
+> which : prints the location of a command
+> echo : passes an entered line to standard input
+> shred : fills a file with random information, allowing for safe deletion (because the file and hard links will both be affected)
+> updatedb : compiles a new index of all files on the machine to be used with the locate command
+> lsblk : list the storage (block) devices attached to a system
+> lshw : lists the hardware detected on the system
+> lsmod : lists the status of modules in the Linux kernel (outputs the contents of /proc/modules)
 
-~MISSING DEFINITIONS
--apt-cache
--grep
--apt-get autoremove
+MISSING DEFINITIONS
+>apt-cache
 
 ~REGEX Reference:
--^ - Start
--$ - End
+>^ - Start
+>$ - End
+>* - Wildcard
+
+~Environment Variables
+HOME : specifies the home directory
+CDPATH : specifies where cd will automatically start its base
+GREP_COLOR : specifies the color grep will use when -color is passed as an argument
+EDITOR : specifies default text editor
 
 https://youtu.be/Y8mLi-rRTh8?t=1480
 
 ~References
--wiki.ubuntu.com
+>wiki.ubuntu.com

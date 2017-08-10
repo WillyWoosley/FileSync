@@ -1,0 +1,57 @@
+#Commands#
+~~~Note: all terminal commands must be prefaced by 'git'~~~
+ ~ init : initializes all the tools needed by git to track the project
+ ~ status : displays changes to working directory, as well as seen but untracked files
+ ~ add FILENAME : adds FILENAME to be included in commmits
+ ~ diff FILENAME : -displays the differences in FILENAME between the working directory and the staging area
+ ~ commit : stores changes from the staging area to the repository
+	~ -m "MESSAGE" : used to add commit message MESSAGE to the commit
+ ~ log : chronologically displays commits
+ ~ show : shows more detailed information about a specified commit
+ ~ checkout : returns the working directory to the specified commit
+ ~ reset : unstages a file from the staging area
+ ~ branch : used to check what branch you are on
+	~ NAME : creates new branch NAME
+	~ -d NAME : deletes branch NAME
+ ~ checkout NAME : checks out NAME into the working directory
+ ~ merge NAME : merges NAME with the selected branch
+ ~ clone LOCATION NAME : clones a remote LOCATION into the repository NAME
+ ~ remote -v : lists a git projects remotes
+ ~ fetch : brings changes from a remote into your local repository on a remote branch
+ ~ push : pushes a branch to the remote, origin, to be reviewed and merged with the master
+
+#Notes#
+ ~ Git has three distinct parts:
+	~ the working directory, where all modification to the file is done
+	~ the staging area, where all changes made to the working directory are listed
+	~ the repository, where git permanently stores changes as different project versions
+ ~ Standard convention for commit messages is to:
+	~ put the commit message in quotation marks
+	~ write the commit message in the present tense
+	~ keep the commit message brief, generally 50 characters or less
+ ~ each commit includes a unique 40 character SHA code, the commit author, the time and date of commit, and
+	the commit message
+ ~ the commit you are currently on is known as the HEAD commit
+ ~ a command can execute on multiple files at the same time (i.e. git add FILE1 FILE2)
+ ~ the first 7 digits of the SHA code of a commit can be passed to git commit in order to revert to that commit
+ ~ using git branch , the currently selected branch is denoted with an asterix
+ ~ all the commands usable on the master branch can be used on any other branch (such as add, commit, etc.)
+ ~ a remote is a (frequently shared) repository which is stored remotely on multiple machines
+ ~ the original remote from which repositories are cloned is called the origin
+ ~ once a branch has been fetched it must still be merged
+ ~ the local copy of a modified remote is stored on the origin/master branch
+ ~ the git workflow generally commences as follows:
+	~ fetch and merge from the remote
+	~ create a branch to work on a new project feature
+	~ develop your feature aand then commit your work
+	~ fetch and merge from the remote again (in case commits were made while you were working)
+	~ push your branch up to the remote for review
+
+
+#Anecdotal Discoveries#
+ ~ git config --global user.name "Your Name" : configures git username
+ ~ git config --global user.email "email@email.com" : configures git email
+ ~ git commit --amend --reset-author : allows you to change author information for git commit
+
+#Further Delving#
+ ~ --amend seems important

@@ -1,11 +1,16 @@
 Install sublime
-//Install spotify
 Automatic vim syntax highlighting
-//Tmux
 Capslock remind to control
 Escape relearn
 Gnome
 Window resizing
-//Touchpad issues (webpage in onetab)
-Touchpad issues persist
+Window movement
+Fix monitor orientation
 Figure out better git workflow than just shoving everything in "SyncSpace"
+Remote access (SSH, TelNet, Chapter 19)
+Look into setting up a server for storage
+
+//Install spotify
+//Touchpad issues (webpage in onetab)
+//Tmux
+
