@@ -1,0 +1,10 @@
+test
+//test
+other//test
+/test/this
+/testthis//too
+/test/this//too /n/0
+also "//please" test this
+and //this //one
+quick /* blocktest
+/*bloctest

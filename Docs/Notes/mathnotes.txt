@@ -1,0 +1,80 @@
+###Notes###
+
+~Chapter One: Sets and Cantor's Theorem~
+- it is possible to have sets which contain other sets, as there is no necesity within a given set for all elements to be of a
+    certain type
+    - given a set {{1,2},3}, 1 would NOT be an element of the se
+- ther eis nothin technically wrong with writing {1,2,3,3}, it is merely redundant and means the same as {1,2,3} as far as sets
+    are concerned
+- the union operation can only be applied to two sets, so {1,2,3} U 4 wouldn't be technically correct, you would have to write
+    {1,2,3} U {4}
+    - the same applies to the intersection operation
+- set difference is not symmetric, so A-B does not necessarily yield the same result as B-A
+- the set symmetric difference is really found by taking A-B, B-A, and then unioning the two resulting sets
+- the Z denoting integers has its root in the German word "Zhalen"
+- there is some contention within the math world as to whether 0 qualifies as a nautral number
+- set-builder notation is a notation which allows for the construction of a set of all elements which match certain criterion
+    - follows the general pattern {variable | conditions variable must satisfy}
+    - using set builder notation it is possible to define many of the numerical sets; i.e. N = {x|xEZ and x>=0}
+    - it can also be used as such: {x|there is an nEN such that x=n/2} or {n/2|nEN}
+- it is not necesary that a predicate be confirmable by a computer, it merely must be able to somehow be verified as true or false
+- {1}={1,1,1} by the axiom of extensionality, since the axiom makes not point as to ther ebeing the same amount of elements
+- any set A is a subset of itself
+- a statement such as "if 1=0 then 3=5" is called a vacuous truth. it is considered to be true, as since the first element
+    of the assertion, and this was technically allowed by the "if" then the second part of the assertion is irrelevant
+    - some other vacuous truths include "Every X has property Y" if there are no X's, and "For any set S, the empty
+        set is a subset of S"
+        - the latter vacuous proof has the interesting implication that the empty set is a subset of itself
+    - a branch of logic called intuitionistic logic arose as a result of dilemmas such as the vacuous truth, which
+        assert that every statement must not necesarily be true or false, and vacuous truths are simply neither
+- the power set of a given set S is defined as {T|T is a subset of S}
+    - the empty set is the power set of the empty set
+- the cardinality of some set A is |A|
+- the caridnality of a finite set is always an integer
+- infinite cardinality is the cardinality of an infinite set
+    - counterintuitively, there are more than one infite cardinality values
+    - the cardinality of N is N0 (aleph-nought, aleph-zero, aleph-null)
+        - this value is larger than all natural numbers
+- Cantor's theorm has the implications that, a), there are problems which cannot be solved by computers, and b), there are
+    true statements which cannot be proven
+
+###Theorms/Axioms###
+axiom of extensionality: if A and B are sets, then A=B precisely when they have the same elements as another
+THEORM: |Even|=|Odd|=|N|=aleph-nought
+THEORM: The cardinality of the set of perfect squares if aleph-nought
+THEORM: if S is a finite set, |S|<|the power set(S)|, since |the power set(S)|=2^|S|
+
+###Others###
+- the cardinality of a finite set is the number of elements in that set
+- two elements are said to have the same cardinality if the elements from the sets can be paired off without there being any
+    remaining unpaired elements
+- |A|<=|B| prcisely when each element of A can be paried with a unique element of B
+    - if |A|<=|B| and |A|!=|B|, then we say |A|<|B|
+
+###Definitions###
+set - an unordered collection of distinct elements
+element - something contained within a set
+empty set - a set which contains no elements
+intersection - the set of elements which are held in common between sets
+union - the set of all elements contained in either of two sets
+set difference - the elements which appear in the first set which do not appear in the second
+set symmetric difference - the set of elements contained in exactly on of A or B, but not both
+finite set - a set containing a finite amount of elements
+infinite set - a set containing infinitely many elements
+predicate - a statement about some object x which is either true or false
+set-builder notation - the set {x|P(x)} is the set of all x such that P(x) is true
+subset - a set such that every element from the set is found within another set (the superset)
+superset - a set that every element within the set is contained within another set, as well as potentially additional elements
+strict subset - a set where every element from the set is found within some set, and the two sets are not equal
+stric superset - a set where every element is found within another set, as well as additional elements not present in the first
+vacuous truth - a truth of the form "if P then Q", where P is always found to be false
+power set - the set of all subsets of a given set
+cardinality - the measure of the size of a set
+
+###Sets###
+Z - set of all integers ({...,-2,-1,0,1,2,...})
+N - set of all natural numbers ({0,1,2,3,...})
+N+ - set of posiitve natural numbers ({1,2,3,...}) (used to explicitely exclude 0, as there is some debate as to whether it 
+    qualifies as a natural number)
+R - set of all real numbers ({1,1.1,1.11,..}) (incomplete representation of the set, as there is infinite entries between each number,
+    and infinite numbers between each one of those infinite numbers)

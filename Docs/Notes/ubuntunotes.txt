@@ -62,6 +62,7 @@
 > renaming and moving something are the exact same thing in linux
 > more was one of the first text pagers in UNIX, but is now simply an alias for less
 > deleting an entire machine is as simple as sudo rm -rf /. You are afforded a lot of power. Use sudo with the utmost caution
+    > this can be prevented from occuring accidentally by adding the line 'alias rm-'rm --preserve-root'' to .bashrc
 > in order for a user to have sudo access, they must be in the suo group and they must be listed in the etc/sudoers file
 > if root access is somehow removed, it can be recovered by booting into recovery mode (shift key during boot), select the menu
     entry for root (Drop to Root Shell Prompt), and then solve the problem for there with the root privleges granted
@@ -79,6 +80,7 @@
     > this can be useful if you want to sometimes direct to one file, or sometimes direct to another, for example
         a live vs. construction build
 > symlinks are used extensively in Linux, for example by deprecated programs to automatically point to their replacements
+> tail -f can be used to monitor log files live
 
 ~Keyboard Shortcuts
 > Shift-Alt-Tab -> Reverse Alt-Tab
@@ -110,7 +112,7 @@
     >purge : same as remove -purge
     >autoremove : removes packages which were once installed as dependencies for other packages, but are no longer needed
     >source : Gets the source of a repository
->apt : New simplified interface to APT, akin to apt-get. Entries will take the form
+> apt : New simplified interface to APT, akin to apt-get. Entries will take the form
     >--dry-run : simulates what the command would do, useful for displaying what will be autoremoved
     APT COMMAND : APT-GET EQUIVALENT
     >install : install
@@ -121,7 +123,7 @@
     >purge : remove -purge
     >autoremove : autoremove
     >purge : purge
->apt-cache : MISSING DEFINITION
+> apt-cache : MISSING DEFINITION
     >search : Searches repositories for a specified package
         >-n : specifies to only search filenames, rather than filenames and descriptions
     >showpkg : Provides information on "reverse depends" (what other packages require or
@@ -134,15 +136,15 @@
     >-i : removes case sensitivity
     >-n : returns the line number of each match
     >-color : the matching input will be colored when outputed by grep
->tar : missing definition
+> tar : missing definition
     >-C : uncompresses tarballs
->file : Specifies filetype of a passed object
->make : Compiles parts of a larger program
+> file : Specifies filetype of a passed object
+> make : Compiles parts of a larger program
     >install : Installs self compiled software
     >clean : Cleans install location of self installed software after a failed install attempt
     >uninstall : Uninstalls self compiled software
->./configure : Compiles source code
->snap : software bundles packaged to work with the Snappy Ubuntu Core
+> ./configure : Compiles source code
+> snap : software bundles packaged to work with the Snappy Ubuntu Core
     >find : lists snap packages available for install
     >install : installes specified package
     >list : list installed snap packages
@@ -154,7 +156,7 @@
     passwd : allows a user to set up a root account by inputing passwords for such an account when prompted
 > man : provides documentation on a specified command
 > info : alternative to man, provides documentation on a specified command
-> apropros : searches for man pages pertaining to a specified keyword
+> apropos : searches for man pages pertaining to a specified keyword
 > whereis : displays the location of a specified command as well as the location of its documentation
 > ls : lists files within current directory
     >-a : displays hidden files (files starting with a period)
@@ -184,7 +186,9 @@
     >-p : allows you to create parent directories if they do not already exist
 > rmdir : removes a specified directory
 > rm : removes a specified file
-    -r : recursively removes files, allowing directories with contents to be deleted
+    >-r : recursively removes files, allowing directories with contents to be deleted
+    >-f : force, i.e. don't prompt for confirmation before deletion
+    >--preserve-root : disallows you from modifying root, preventing accidental deletion of /
 > newgrp : allows you to log into a new group
 > chmod : allows altering of file permissions
     >+/-u : toggles user rwx
@@ -214,6 +218,8 @@
     >u/g/o/m: /NAME: /PERMISSIONS : add a user (u), other (o),  or group (g) of NAME (not necessary for u)  with PERMISSIONS;
         specifying m will mask other options, meaning that regardless of other settings your settings will override them
 > mv : moves a specified file to another file, either moving it to a different location or simply renaming it
+    >-f : overwrites files without asking
+    >-u : moves the specified file only if it is newer than the destination file
 > cp : copies a specified file into a specified file
     >-u : copies a file only if it does not exist in/at the location or if it has been modified
     >--parents : copies a file as well as its entire filepath
@@ -261,9 +267,14 @@
 > locate : finds specified file within an index of all files created by a cron (fast, but not up to the minute accurate)
     >-i : disable case sensitivity
 > nano : used to edit a specified file
-> sort : sorts a specified file based upon specified criterion and outputs the results
+> sort : sorts a specified file, by default sorts alphabetically
+    >-r : reverses the order of the sort
+    >-n : sort numerically
+    >-kNUM : allows you to specify which column NUM to sort by
 > ssh : connects to other machines using a secure shell connection
 > tail : prints the last lines of a file
+    >-f : follows, meaning that it will continue to output as the file is updated
+    >--pid : allows you to specify a certain PID, which when stopped will also cause the tail to cease
 > vim : used to edit a specified file
 > which : prints the location of a command
 > echo : passes an entered line to standard input
@@ -272,6 +283,12 @@
 > lsblk : list the storage (block) devices attached to a system
 > lshw : lists the hardware detected on the system
 > lsmod : lists the status of modules in the Linux kernel (outputs the contents of /proc/modules)
+> whatis : displays a simple one line summary of the function of a passed command
+> type : returns how a name will be interpereted if used in a command, generally shows options as well as binary to be used
+> rename : renames a specified file to a new file, by taking a passed Perl command
+> wget : directly downloads a linked file to the directory from wehich the command is issued
+    >-m/--mirror : downloads all the contents of a directory specified
+> printenv : prints a list of all of the available environment variables
 
 MISSING DEFINITIONS
 >apt-cache
@@ -280,6 +297,9 @@ MISSING DEFINITIONS
 >^ - Start
 >$ - End
 >* - Wildcard
+>? - Single Wildcard
+>[CHARS] - Any char in CHARS
+>! - Not
 
 ~Environment Variables
 HOME : specifies the home directory

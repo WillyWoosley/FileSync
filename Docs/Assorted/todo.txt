@@ -4,7 +4,7 @@ Capslock remind to control
 Escape relearn
 Gnome
 Window resizing
-Window movement
+Window movement (janky fix using Ctrl-Alt-NUM4 || NUM6)
 Fix monitor orientation
 Figure out better git workflow than just shoving everything in "SyncSpace"
 Remote access (SSH, TelNet, Chapter 19)

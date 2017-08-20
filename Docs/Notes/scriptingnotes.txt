@@ -1,0 +1,70 @@
+- there are four kinds of commands:
+    - an executable command, such as those found in /usr/bin/
+    - a command built into the shell, commands such as cd
+    - a shell function, minature shell scripts incorperated into the environment
+    - an alias, commands defined by a user built from other commands
+- in the description of a commands syntax, [] denote optional parameters, | denotes mutually exclusive terms
+- to specify which section to search for a man command, add that sections number preceeded by a ., i.e. man man.7
+    - which number corresponds to what sections is explained in man man
+- by default, standard ouput directs its contents to the display
+- by default, standard input is received from the keyboard
+- expansion is the process by which all the shortcuts and placeholders inputted by the user are converted into a standard form which
+    the shell is able to comprehend
+- the ~ redirects to the home of the current user, or a user specified directly after the ~ (~USERNAME)
+- equations can be carried out directly by the shell if passed as such: $((EXPRESSION))
+    - only integers are supported
+    - ** denotes 'raised to the power of'
+- brace expansion allows you to create multiple text strings of the same form but with slightly differing names; i.e. doc{1,2,3}.txt
+    - brace expansion can be nested; i.e. doc{1{a, b},2,3{a,b,c}}.txt
+- command substitution allows the use of command output as an expansion; i.e. echo $(ls)
+- an older syntax for command substitution involves using backquotes (`) rather than a $
+- quoting can be used in order to suppress the meanings of symbols to the shell
+    - double quotes (") are used to supress all meaning spare parameter, arithmetic, and command substitution ($, \, `)
+    - single quotes (') are used to supress all meaning
+- the \ is the escape character, allowing for the use of single characters which are otherwise reserved for the shell
+- the \ can also be passed to suppress recognition of newlines, allowing you to type commands to the shell which are longer
+    than a single line without them wrapping on their own in an akward position
+- UNIX machines are somewhat unique in the fact that multiple users can access any given machine at the same time
+    - this is a holdover from when computers where much less easily accessible, consisting of a single mainframe and multiple
+        distributed terminals
+    - this is what prompted the creation of UNIX's in depth permissions system
+- to run a program in the background simply add a & after the call to start the program
+- kill can send multiple different types of kill commands, denoting different things to programs
+    - Signal 15, or SIGTERM is the default if no other signal is specified
+    - Signal 2/SIGINT is the equvalent of Ctrl-c
+
+- the first line of a script must be a shebang, a path given to the shell to establish what program to use to execute the command
+- the computer has a set list of directories which it will look in when executing a script to see what to do
+    - additional directories can be added to this list by exporting paths from the .profile config file
+- the system holds a number of variables pertaining to the current runtime in its memory: this is called the environment
+    - these things include username, name of the file wher email is, and other such fields
+- startup files are, logically, the files which bash reads when it first starts up
+    - it first reads files which contain information pertaining to the environment of all users, and then information pertaining to the
+        individual user using the machine
+- a login shell session is one where a user is prompted for username and password, a non-login session is typically a terminal
+    session launched from the GUI
+- login shells read the following files on startup:
+    - /etc/profile/ : a global config script for all users of the machine
+    - ~/.bash_profile : an individual users startup file, can be used to override the global scripts for a user
+    - ~/.bash_login : read in the absence of a .bash_profile
+    - ~/.profile : read if neither /.bash_profile or /.bash_login are present
+- a non-login shell reads the following files on startup:
+    - /etc/bash.bashrc : a global configuration file applying to all users
+    - ~/.bashrc : a users personal startup file, can extend or override settings from global config file
+- /.bashrc is one of the most important startiup files, as it is read by default in non-login sessions, and most login shell
+    config files make provisions to read the /.bashrc
+- a shell function is like a minature script within a script, which can be called from within the script
+- the () denotes to the shell that whatever is to follow is part of the function of name specified before the () function call
+    - this allows you to enter functions directly onto the command line, although they will not be saved between instances
+- a here script (or here document) is a type of I/O redirection which allows you to pass standard input to a command
+- variables can be added to a shell script by a simple assignment statement, and then used in the usual expansion fashion ($)
+    - note no spaces are allowed around the = in the variable assignment
+    - environment variables can also be referenced within shell scripts
+    - variables can also be the result of commands
+- expression expansion can occur using standard syntax, i.e. $(EXPRESSION)
+    - note that an older format using ` rather than $ exists, which is compatible with sh
+- it is common convention to write constants in all caps
+
+- export : tells the shell to make the contents specified available to child processes
+- alias NAME = VALUE : allows for the specification of a NAME, which, when inputted to the command prompt, will execute as though
+    VALUE had been inputted to the command prompt
