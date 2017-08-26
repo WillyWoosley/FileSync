@@ -1,0 +1,10 @@
+nothing
+"nothing" abc
+not "things
+"not" a "thing" here
+test '"' char
+test '"' "char" again
+"test" '"' once more
+"and" '"' "again"
+"and" '\\' again
+ 
