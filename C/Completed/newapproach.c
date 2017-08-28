@@ -11,19 +11,14 @@ int contains(char pass[], char search);
 int main() {
 
     char input[MAXCHAR], mod[MAXCHAR];
-    int len, index;
+    int len, index, firstindex;
     int inbloc = 0;
-
+    
     while ((len = getinputline(input, MAXCHAR)) > 0) {
         copy(input, mod);
         format(mod);
-        //at this point we are left with two strings, one raw, one formatted
-        //to exclude strings and chars, to allow more streamlined searching
-        
-        //this is where bloc processing should occur
         
         if (inbloc) {
-
             if ((index = contains(mod, '/')) > 0) {
                 if (mod[index-1]=='*') {
                     copy(mod+index+1, mod);
@@ -44,13 +39,15 @@ int main() {
                 input[index]='\n';
                 input[index+1]='\0';
                 inbloc = 1;
-                printf("%d", inbloc);
-                //this logic is broken, revolves around the contains function
-                //returning the index of passed array, not of original array
-                //can be got arround by addition
-                //also revolves around that index is the index of the / in /*, contains needs to start later
-                if ((index=contains(mod+index, '*')) > -1 && mod[index+index+1]=='/') {
-                    inbloc=0;
+                printf("%d", index);
+                firstindex = index;
+                if ((index = contains(mod+firstindex+2, '*')) > -1) {
+                    printf("got");
+                    if (mod[index+firstindex+3]=='/') {
+                        printf("here");
+                        inbloc=0;
+                    }
+
                 }
                 printf("%d", inbloc);
             }
@@ -75,7 +72,7 @@ void format(char line[]) {
                if (instr) {
                     instr=0;
                     fin=i;
-                    rm(line, start, fin+1);
+                    rm(line, start, fin);
                     i=0;
                 } else {
                     instr=1;
@@ -88,9 +85,9 @@ void format(char line[]) {
     for (int i=0; line[i]!='\0'; i++) {
         if (line[i]=='\'') {
             if (line[i+1]=='\\') {
-                rm(line, i, i+4);
-            } else {
                 rm(line, i, i+3);
+            } else {
+                rm(line, i, i+2);
             }
         }
     }    

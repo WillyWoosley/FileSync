@@ -81,6 +81,11 @@
         a live vs. construction build
 > symlinks are used extensively in Linux, for example by deprecated programs to automatically point to their replacements
 > tail -f can be used to monitor log files live
+> piping things to /dev/null will cause them to be deleted, which can be useful when dealing with programs with
+    cumbersomely verbose outputs
+> input/output streams are numbered as follows : stdin : 0, stdout : 1, stderr : 2
+> program >> filename 2>&1 will pipe stderr and stdout from program to filename
+    > ommiting the pipe to the filename will cause it to be printed to the screen
 
 ~Keyboard Shortcuts
 > Shift-Alt-Tab -> Reverse Alt-Tab
@@ -89,6 +94,13 @@
 > Ctrl-Alt-Arrow Key to move between workspaces
 > Ctrl-Alt-F[1..6] : Switches to tty1-6; virtual consoles
 > Ctrl-Alt-F7 : Returns to the GUI
+
+~Redirection:
+> : pipe output
+< : pipe input
+>> : append output
+> (No space between program and file) : pipe stderr
+&> : pipe stderr and stdout
 
 ~Terminal Commands
 > mkisofs : Used for burning ISO images
@@ -289,6 +301,10 @@
 > wget : directly downloads a linked file to the directory from wehich the command is issued
     >-m/--mirror : downloads all the contents of a directory specified
 > printenv : prints a list of all of the available environment variables
+> dpkg : used to manage software packages
+    >--get-selections : gets all installed packages
+    >--set-selections : marks inputted packages for installation
+> diff : displays the differences between files
 
 MISSING DEFINITIONS
 >apt-cache
@@ -307,7 +323,6 @@ CDPATH : specifies where cd will automatically start its base
 GREP_COLOR : specifies the color grep will use when -color is passed as an argument
 EDITOR : specifies default text editor
 
-https://youtu.be/Y8mLi-rRTh8?t=1480
-
 ~References
 >wiki.ubuntu.com
+>linuxcommand.org
