@@ -1,6 +1,23 @@
-~Notes:
-  ~ man xorg.conf contains important information about graphical/desktop setting configuration
-  ~ The important components of the xorg.conf are : ServerLayout, Files, Module, Input Device,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+otes:
+  ~ man xorg.conf contains important information about graphical/desktop setting configuration:::::~ The important components of the xorg.conf are : ServerLayout, Files, Module, Input Device,
     Monitor, Device, Screen
     ~ ServerLayout deals with display and screen layout, and names input devices
     ~ Files deals with session colors and port numbers
@@ -104,19 +121,6 @@
     > TERM, which contains the type of terminal in use
         > any of these variables can be printed using echo $VARIABLE
 > environment variables are contained within resource files, which are located in disparit
-> sed -e 's/word1/word2/g' doc.txt will replace every instance of word1 to word2 in doc.txt\
-> sed -e '4,17d' doc.txt would delete lines 4-17 (inclusive) in doc.txt
-> when a aystem is totally hung, the REISUB command should be used, a handy mneumonic which tells you which keys will need to be pressed
-    > first, SysRq (PrtScn) + Alt must be pressed, then:
-        >R : unRaw, which takes control of the keyboard back from the X server
-        >E : tErminate, which sends a SIGTERM signal to all running porcesses
-        >I : kIll, which sends a SIGKILL to all running processes
-        >S : Sync, which flushes data from the memory to the disk
-        >U : Unmount, which unmounts the filesystems and remounts them as read only
-        >B : reBoot : which power cycles the computer
-> if a computer refuses to boot at all, even from boot media (USB's, DVD's, etc.), it means that either the boot order has been 
-    compromised, or there is a hardware issue
-> if the GRUB menu does not appear when the shift key is held down, it has likely been overwritten
 
 ~Keyboard Shortcuts
 > Shift-Alt-Tab -> Reverse Alt-Tab
@@ -179,12 +183,8 @@
     >-i : removes case sensitivity
     >-n : returns the line number of each match
     >-color : the matching input will be colored when outputed by grep
-> tar : creates, expands, or lists the contents of compressed or uncompressed file or directory archives (tarballs) 
+> tar : missing definition
     >-C : uncompresses tarballs
-    >czf : creates a compressed archive
-    >czvf : creates a compressed archive and displays the files being compressed as they are compressed
-    >tzf : list the files of a compressed archive
-    >zxf : expands the contrents of a compressed archive, extracting the contents into the current directory
 > file : Specifies filetype of a passed object
 > make : Compiles parts of a larger program
     >install : Installs self compiled software
@@ -311,7 +311,6 @@
     >--exclude : specifies a certain filname to exclude (uses shell expressions rather than regular exxpressions)
     >-X : identical to --exclude, except for a file is specified which contains a list of filenames to be excluded
 > emacs : used to edit a specified file
-    >-nw : creates the emacs window within the terminal, rather than in a new emacs windo   >-nw : creates the emacs window within the terminal, rather than in a new emacs windoww
 > locate : finds specified file within an index of all files created by a cron (fast, but not up to the minute accurate)
     >-i : disable case sensitivity
 > nano : used to edit a specified file
@@ -376,15 +375,6 @@
     >-i : specifies exactly what matching liones should be operated on
 > env : prints all environment variables
 > source : will source a specified (generally config file) immediate
-> sed : edits standard in and output
-    >-e : explicetly tells the following command to be run (necesary if more than one command is to be run
-> awk : edits input strings
-> bunzip2 : expands a compressed file
-> bzip2 : compresses or expands files and directories
-> gunzip : expands a compressed file
-> gzip : compresses or expands files and directories
-> byobu : terminal multiplexer
-
 MISSING DEFINITIONS
 >apt-cache
 

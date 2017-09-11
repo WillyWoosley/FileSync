@@ -3,4 +3,18 @@
     to : Synaptics Finger: 50 90 255
 link for help: https://askubuntu.com/questions/483707/14-04-touchpad-is-too-sensitive
 
+base16:
+    base16
+    base16 shell
+    base16 gnome-terminal
+
+dict:
+    dict
+    gcide
+    foldoc
+    jargon
+    devil
+    elements
+    moby-thesaurus
+
 tmux installed
