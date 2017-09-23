@@ -1,0 +1,1 @@
+/home/maw/SyncSpace/RustProjects/communicator/target/debug/communicator-c96c0929cab57b29: /home/maw/SyncSpace/RustProjects/communicator/src/network/server.rs /home/maw/SyncSpace/RustProjects/communicator/src/network/mod.rs /home/maw/SyncSpace/RustProjects/communicator/src/lib.rs /home/maw/SyncSpace/RustProjects/communicator/src/client.rs
