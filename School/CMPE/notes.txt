@@ -1,0 +1,134 @@
+Darrell Long/Maxwell Dunne
+TA's: cmpe12-ta@ucsc.edu
+
+Assignments: canvas.ucsc.edu
+Forum: piazza.com/ucsc/fall2017/cmpe12
+
+~~~9/29/17 (Class One)~~~
+-We will cover
+    - Intro to computer systems and assembly language
+    - digital logic
+    - number systems
+    - data structures
+    - compiling/assembly process
+    - system software
+    - computer architecture
+    - introduction to C
+-For help: Piazza -> TA's -> Max -> Darrell
+-If emailing Max/Darrell:
+    -include [CMPE12] in subject line
+    - be specific
+-Also what wee will cover:
+    - binary numbers
+    - binary arithmetic
+    - logic gates and functions
+    - MIPS assembly
+    - MIPS programming
+    - MIPS architecture
+    - Other number systems
+    - fixed and floating-point numbers and arithmetic
+        - IEEE 754 Floating-Point
+    - CMOS systems
+    - logic gate synthesis
+-Will NOT cover:
+    - Hardware design (CMPE 100/110)
+    - Extensive C codeing (CMPE 13)
+    - software engineering
+    - algorithms (CS 101)
+-Requirements:
+    -Reccommended: attend lectures
+    -Midterm and final
+-Lab requirements
+    - go to lab sections for help (can go to other sections, but will not receive priority)
+    - weekly.semi-weekly lab assignments
+-Lab work:
+    - Logic design with logic sumulator
+    - Programming assignments in MIPS
+-Labs consist of:
+    - Lab word (code, design file, etc.)
+    - Lab write-up
+-Assignments will be turned in through git (fuck yes)
+-Late scale:
+    -0: 100
+    -1: 95
+    -2: 85
+    -3: 70
+    -4: 50
+    -5: Not accepted
+-Grade breakdown:
+    -Labs: 50
+    - Midterm: 25
+    -Final: 25
+-Cannot make up missed exams
+-Same grade for lab and class
+-glitch in Canvas where unsubmitted assignments will appear ass 100%, do not let this fool you
+
+~Charles Babbage
+    -Father of the computer
+    - 1830: Difference engine--used mechanical power
+        - calculated mathematical tables
+        -smallest imperfections caused errors
+        -printed out using a handcrank
+        -funded by the British government
+    -funding pulled because colleagues thought it wouldn't work
+        -conceived of analytical engine
+        -son built a model of the machine
+        -working version finally built in 1991
+-Ada, countess of Lovelace
+    - mother of computer programming and the first programmer
+    -gifted mathematician
+-Herman Hollerith
+    - first electrical computer made in 1890
+        -used Jacquard's punch cards
+            -developed by a French silk weaver Joseph Marie Jaquard
+            -holes manually punched into cards to denote what bits do today
+        -tabulating machine company merged into IBM in 1924
+-Howard Eiken began thinking of modern analytical engine in 1936
+-Konrad Zuse completed the first progrmmable general purpose calculating device in 1939
+-John Atanoff developed first electronic digital computer (ABC) in 1939
+-Howard Aiken completed the Mark 1 in 1944
+    -Grace Hopper developed compiler for Mark 1
+    -8 feet tall, 55 feet long
+    -used electromechanical relays
+    -5-6 times faster than a persion
+    -information entered using paper tape
+-Grace Hopper found first (debatebly) computer "bug," which was a literal bug, forcing them to "debug" the computer
+-ENIAC in WWII
+    -based off ABC
+    -used to calculate trajectory tables for artillery
+    -first general purpose computer
+-UNIVAC 1 in 1951
+    -first general purpose commercial computer
+-Von Neumann Architecture
+    -Consists of CPU, ALU, Control
+    -Memory
+    -I/O
+    -Model still in used today
+-1951-1958 wass the era of Vacuum tubes
+    -~ the size of light bulds
+    -thousands, which would frequently break down/burn out
+        -question was always "is the problem in my program or with the computer"
+-1959-1964 saw ithe introduction of the transistor
+    -telegraph electronic signals across resistors
+    -allowed Assembly
+    -1954- FORTRAN, first real "language"
+-1965-1970 saw introduction of integrated circuit
+    -many transistors grouped (100's-1000's)
+    -uses Silicon (a semiconductor)
+        -will transmit when certain chemical impurities are introducted into lattice structure
+    -Allowed IBM 360
+    -made computers affrordable to small and medium scale businesses
+    -software industry born, viability of selling software
+-1971-Present uses the microporcessor
+    -more tighlty bundled integrated circuits
+-next generation appears to be SOC, System-on-a-chip generation
+    -strive to put everythin onto a single chip
+-have gotten to the point where light is too big, need to used ultraviolet light
+-MSI?
+-Charles W. Kann Introduction To MIPS Assembly Language Programming?
+-MIPS?
+-X-86?
+-IEEE 754 Floating-Point?
+-CMOS?
+-ALU?
+-IBM 360?

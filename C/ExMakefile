@@ -1,0 +1,6 @@
+CC=gcc
+CFLAGS=-Wall
+main: contains.o
+
+clean:
+	rm -f main main.o hello_fn.o

@@ -18,3 +18,5 @@ dict:
     moby-thesaurus
 
 tmux installed
+neovim
+vim-plug

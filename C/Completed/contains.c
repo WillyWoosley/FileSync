@@ -8,7 +8,8 @@ int main() {
     char test[] = {'h', 'e', 'l', 'l', 'o', '\n', '\0'};
     char other[20];
 
-    copy(test + 2, test);
+    copy(test, other);
+
     printf("%s", test);
 
     return 0;
