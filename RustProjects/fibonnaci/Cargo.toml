@@ -1,6 +1,6 @@
 [package]
 name = "fibonnaci"
 version = "0.1.0"
-authors = ["WillyWoosley <wdwoosley@gmail.com>"]
+authors = ["wdwoo <wdwoosley@gmail.com>"]
 
 [dependencies]
